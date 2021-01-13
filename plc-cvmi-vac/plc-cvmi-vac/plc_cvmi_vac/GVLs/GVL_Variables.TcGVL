@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_Variables" Id="{5467770e-821f-423d-bd4b-6868853d3f2a}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+	{attribute 'pytmc' := '
+		pv: PLC:CVMI:VAC:OVRDON
+		io: io
+	'}
+	xSystemOverrideMode_CVMI	: BOOL := FALSE; (* Global system override for the HXR Vacuum System EBD*)
+	
+	{attribute 'pytmc' := '
+		pc: PLC:CVMI:ON:BEAMLINE
+		io:io
+	'}
+	xOnBeamline	:	BOOL := TRUE; (*Always assume On Beamline for safety checks*)
+	
+	rHighVoltageMinPressure	: REAL := 1e-05; (*Hard coded High voltage Minimum Enable Pressure*)
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
