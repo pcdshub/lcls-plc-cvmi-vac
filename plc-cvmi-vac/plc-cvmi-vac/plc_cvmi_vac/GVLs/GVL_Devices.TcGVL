@@ -4,34 +4,75 @@
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
 	(*Rack Mounted Turbo Pumps*)
-	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[CVMI_PLC_E6_EL1004]^Channel 2^Input;
-								 .i_xFaultNC		:=	TIIB[CVMI_PLC_E6_EL1004]^Channel 1^Input;
-								 .q_RunDO			:=	TIIB[CVMI_PLC_E7_EL2794]^Channel 1^Output			 
-	'}
+	{attribute 'TcLinkTo' := 	'.i_xR1				:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 1^Input;
+								 .i_xLSpd			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 2^Input;
+								 .i_xSTART			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 3^Input;
+								 .i_xFault			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 4^Input;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E07_EL2794]^Channel 1^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E07_EL2794]^Channel 2^Output;
+								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E08_EL3064]^AI Standard Channel 1^Value;
+							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E08_EL3064]^AI Standard Channel 2^Value			 
+	'} 
 	{attribute 'pytmc' := '
 		pv: CVMI:GJ:PTM:01
 		io: io
 	'}
 	CVMI_GJ_PTM_01 : FB_PTM_Agilent;
 	
+	{attribute 'TcLinkTo' := 	'.i_xR1				:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 5^Input;
+								 .i_xLSpd			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 6^Input;
+								 .i_xSTART			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 7^Input;
+								 .i_xFault			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 8^Input;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E07_EL2794]^Channel 3^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E07_EL2794]^Channel 4^Output;
+								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E08_EL3064]^AI Standard Channel 3^Value;
+							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E08_EL3064]^AI Standard Channel 4^Value			 
+	'} 
 	{attribute 'pytmc' := '
 		pv: CVMI:GJ:PTM:02
 		io: io
 	'}
 	CVMI_GJ_PTM_02 : FB_PTM_Agilent;
 	
+	{attribute 'TcLinkTo' := 	'.i_xR1				:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 1^Input;
+								 .i_xLSpd			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 2^Input;
+								 .i_xSTART			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 3^Input;
+								 .i_xFault			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 4^Input;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E10_EL2794]^Channel 1^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E10_EL2794]^Channel 2^Output;
+								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E11_EL3064]^AI Standard Channel 1^Value;
+							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E11_EL3064]^AI Standard Channel 2^Value			 
+	'} 
 	{attribute 'pytmc' := '
 		pv: CVMI:GJ:PTM:03
 		io: io
 	'}
 	CVMI_GJ_PTM_03 : FB_PTM_Agilent;
 	
+	{attribute 'TcLinkTo' := 	'.i_xR1				:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 5^Input;
+								 .i_xLSpd			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 6^Input;
+								 .i_xSTART			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 7^Input;
+								 .i_xFault			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 8^Input;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E10_EL2794]^Channel 3^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E10_EL2794]^Channel 4^Output;
+								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E11_EL3064]^AI Standard Channel 3^Value;
+							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E11_EL3064]^AI Standard Channel 4^Value			 
+	'}
 	{attribute 'pytmc' := '
 		pv: CVMI:GJ:PTM:04
 		io: io
 	'}
 	CVMI_GJ_PTM_04 : FB_PTM_Agilent;
 	
+	{attribute 'TcLinkTo' := 	'.i_xR1				:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 1^Input;
+								 .i_xLSpd			:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 2^Input;
+								 .i_xSTART			:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 3^Input;
+								 .i_xFault			:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 4^Input;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E13_EL2794]^Channel 1^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E13_EL2794]^Channel 2^Output;
+								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E14_EL3064]^AI Standard Channel 1^Value;
+							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E14_EL3064]^AI Standard Channel 2^Value			 
+	'}
 	{attribute 'pytmc' := '
 		pv: CVMI:MAIN:PTM:01
 		io: io
