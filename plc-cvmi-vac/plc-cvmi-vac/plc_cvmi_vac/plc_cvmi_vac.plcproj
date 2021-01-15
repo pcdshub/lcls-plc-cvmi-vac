@@ -18,7 +18,6 @@
     <Compile Include="GVLs\GVL_COM.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
-      <ExcludeFromBuild>true</ExcludeFromBuild>
     </Compile>
     <Compile Include="GVLs\GVL_Devices.TcGVL">
       <SubType>Code</SubType>
