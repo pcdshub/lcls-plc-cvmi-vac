@@ -5,10 +5,10 @@
 VAR_GLOBAL
 	(*TMO Beamline Vacuum*)
 	//Outputs
-	fb_ADS_WATCHDOG_VAC_LAMP_TMO:FB_ADS_WATCHDOG;
+	fb_ADS_WATCHDOG_VAC_CVMI_TMO:FB_ADS_WATCHDOG;
 	
 	(*ISEG HV Crate Safety Loop*)
-	{attribute 'TcLinkTo' := 	'TIIB[LAMP_PLC_E10_EL2794]^Channel 1^Output			 
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E13_EL2794]^Channel 4^Output			 
 	'}
 	xHighVoltageSafteyLoopEnable AT %Q* : BOOL := FALSE; (*When Enables the High voltage Saftey loop is closed and HV can start.*)
 END_VAR]]></Declaration>
