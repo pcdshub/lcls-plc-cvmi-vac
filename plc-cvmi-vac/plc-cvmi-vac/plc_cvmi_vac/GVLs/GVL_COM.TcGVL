@@ -72,7 +72,6 @@ VAR_GLOBAL
 	'}
 	stComOut_CVMI_CATCH_PTM_01		AT %Q*	:	EL6outData22B;
 	
-	//SERIAL IO
 	{attribute	'TcLinkTo'	:=	'.Status:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Status;
 								 .D[0]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Data In 0;
 								 .D[1]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Data In 1;

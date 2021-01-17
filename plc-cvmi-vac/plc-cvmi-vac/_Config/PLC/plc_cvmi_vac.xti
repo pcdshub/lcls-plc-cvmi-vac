@@ -77,7 +77,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{AF068F7A-26FA-44CC-B5B4-E5618DDF7899}" Name="plc_cvmi_vac" PrjFilePath="..\..\plc_cvmi_vac\plc_cvmi_vac.plcproj" TmcFilePath="..\..\plc_cvmi_vac\plc_cvmi_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_cvmi_vac\plc_cvmi_vac.tmc">
 			<Name>plc_cvmi_vac Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -93,6 +93,20 @@
 					<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
 					<Comment>
 						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
+					<Name>DIAGNOSTICS.i_sAMSNetID</Name>
+					<Comment>
+						<![CDATA[Link the sAMSNetID to the Etherat Master netID]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
+					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
+					<Comment>
+						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
 					</Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
