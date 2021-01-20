@@ -10,7 +10,7 @@ VAR_GLOBAL
 	xSystemOverrideMode_CVMI	: BOOL := FALSE; (* Global system override for the HXR Vacuum System EBD*)
 	
 	{attribute 'pytmc' := '
-		pc: PLC:CVMI:ON:BEAMLINE
+		pv: PLC:CVMI:ON:BEAMLINE
 		io:io
 	'}
 	xOnBeamline	:	BOOL := TRUE; (*Always assume On Beamline for safety checks*)

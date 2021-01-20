@@ -119,9 +119,6 @@
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComIn_CVMI_ROUGH_PTM_01</Name>
-					<Comment>
-						<![CDATA[SERIAL IO]]>
-					</Comment>
 					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
@@ -737,7 +734,7 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.CVMI_ROUGH_VRC_02.q_xCLS_DO</Name>
+					<Name>GVL_Devices.CVMI_ROUGH_VRC_02.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -1018,7 +1015,7 @@
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_02.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_02.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_VRC_01.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_VRC_02.q_xCLS_DO" VarB="Channel 15^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_VRC_02.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP12_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_03.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
