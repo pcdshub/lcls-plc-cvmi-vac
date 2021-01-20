@@ -1,0 +1,2 @@
+epicsEnvSet("IOC_TOP", "/c/Users/adpai/Desktop/FromGithub/lcls-plc-cvmi-vac/plc-cvmi-vac/iocBoot/ioc-plc-cvmi-vac")
+epicsEnvSet("IOC_DATA", "C:\Users\adpai/iocData")
