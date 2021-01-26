@@ -118,11 +118,11 @@ VAR_GLOBAL
 	KTOF_PTM_02 : FB_PTM_Pfeiffer;
 	
 (*KTOF Turbo Pump*)
-	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[KTOF_EP01_EP2338-0002]^Channel 1^Input;
-								 .i_xFaultNC		:=	TIIB[KTOF_EP01_EP2338-0002]^Channel 2^Input;
-								 .i_xRemote			:=	TIIB[KTOF_EP01_EP2338-0002]^Channel 3^Input;
-								 .q_RunDO			:=	TIIB[KTOF_EP02_EP2624-0002]^Channel 1^Output;
-								 .q_xReset 			:=	TIIB[KTOF_EP02_EP2624-0002]^Channel 2^Output				 
+	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 1^Input;
+								 .i_xFaultNC		:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 2^Input;
+								 .i_xRemote			:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 3^Input;
+								 .q_RunDO			:=	TIIB[KTOF_PNL1_EP02_EP2624-0002]^Channel 1^Output;
+								 .q_xReset 			:=	TIIB[KTOF_PNL1_EP02_EP2624-0002]^Channel 2^Output				 
 	'}
 	{attribute 'pytmc' := '
 		pv: KTOF:PTM:01

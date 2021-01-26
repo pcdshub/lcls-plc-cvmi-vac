@@ -90,75 +90,80 @@ xHighVoltageSafteyLoopEnable:= (CVMI_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
 *In general, if turbo pump setpoints are above the pirani guage readings or there is no downstream open path to a roughing pump, the turbo pump will close.
 *
 *)
-	CVMI_GJ_PTM_01(
-	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
-					i_stTurbo:= CVMI_GJ_PTM_01.iq_stPtm, 
-					i_stISG:= CVMI_GJ_GPI_01.PG, 
-					i_stBSG:= CVMI_ROUGH_GPI_04.PG, 
-					iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
-					iq_stValve_NC:= CVMI_ROUGH_VRC_03.iq_stValve, 
-					iq_stValve_NC_second:= CVMI_ROUGH_VRC_01.iq_stValve,
-					ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
-					iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH2_VRC_01.VGC,
-					iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH1_VRC_01.VGC,
-					x_onBeamline:= xOnBeamline),
-	iq_stPtm=> );
+	CVMI_GJ_PTM_01(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
+						i_stTurbo:= CVMI_GJ_PTM_01.iq_stPtm, 
+						i_stISG:= CVMI_GJ_GPI_01.PG, 
+						i_stBSG:= CVMI_ROUGH_GPI_04.PG, 
+						iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
+						iq_stValve_NC:= CVMI_ROUGH_VRC_03.iq_stValve, 
+						iq_stValve_NC_second:= CVMI_ROUGH_VRC_01.iq_stValve,
+						ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
+						iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH2_VRC_01.VGC,
+						iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH1_VRC_01.VGC,
+						x_onBeamline:= xOnBeamline), 
+					i_stGauge:= CVMI_ROUGH_GPI_04.PG, 
+					i_rMaxBackingPressure:= 1, 
+					iq_stPtm=> );
 	
-	CVMI_GJ_PTM_02(
-	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
-					i_stTurbo:= CVMI_GJ_PTM_02.iq_stPtm, 
-					i_stISG:= CVMI_GJ_GPI_01.PG, 
-					i_stBSG:= CVMI_ROUGH_GPI_04.PG, 
-					iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
-					iq_stValve_NC:= CVMI_ROUGH_VRC_03.iq_stValve, 
-					iq_stValve_NC_second:= CVMI_ROUGH_VRC_01.iq_stValve,
-					ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
-					iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH2_VRC_01.VGC,
-					iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH1_VRC_01.VGC,
-					x_onBeamline:= xOnBeamline),
-	iq_stPtm=> );
+	CVMI_GJ_PTM_02(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
+						i_stTurbo:= CVMI_GJ_PTM_02.iq_stPtm, 
+						i_stISG:= CVMI_GJ_GPI_01.PG, 
+						i_stBSG:= CVMI_ROUGH_GPI_04.PG, 
+						iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
+						iq_stValve_NC:= CVMI_ROUGH_VRC_03.iq_stValve, 
+						iq_stValve_NC_second:= CVMI_ROUGH_VRC_01.iq_stValve,
+						ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
+						iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH2_VRC_01.VGC,
+						iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH1_VRC_01.VGC,
+						x_onBeamline:= xOnBeamline), 
+					i_stGauge:= CVMI_ROUGH_GPI_04.PG, 
+					i_rMaxBackingPressure:= 1, 
+					iq_stPtm=> );
 	
-	CVMI_GJ_PTM_03(
-	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
-					i_stTurbo:= CVMI_GJ_PTM_03.iq_stPtm, 
-					i_stISG:= CVMI_GJ_GPI_01.PG, 
-					i_stBSG:= CVMI_ROUGH_GPI_04.PG, 
-					iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
-					iq_stValve_NC:= CVMI_ROUGH_VRC_03.iq_stValve, 
-					iq_stValve_NC_second:= CVMI_ROUGH_VRC_01.iq_stValve,
-					ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
-					iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH2_VRC_01.VGC,
-					iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH1_VRC_01.VGC,
-					x_onBeamline:= xOnBeamline),
-	iq_stPtm=> );
+	CVMI_GJ_PTM_03(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
+						i_stTurbo:= CVMI_GJ_PTM_03.iq_stPtm, 
+						i_stISG:= CVMI_GJ_GPI_01.PG, 
+						i_stBSG:= CVMI_ROUGH_GPI_04.PG, 
+						iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
+						iq_stValve_NC:= CVMI_ROUGH_VRC_03.iq_stValve, 
+						iq_stValve_NC_second:= CVMI_ROUGH_VRC_01.iq_stValve,
+						ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
+						iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH2_VRC_01.VGC,
+						iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH1_VRC_01.VGC,
+						x_onBeamline:= xOnBeamline), 
+					i_stGauge:= CVMI_ROUGH_GPI_04.PG, 
+					i_rMaxBackingPressure:= 1, 
+					iq_stPtm=> );
 	
-	CVMI_GJ_PTM_04(
-	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
-					i_stTurbo:= CVMI_GJ_PTM_04.iq_stPtm, 
-					i_stISG:= CVMI_GJ_GPI_01.PG, 
-					i_stBSG:= CVMI_ROUGH_GPI_04.PG, 
-					iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
-					iq_stValve_NC:= CVMI_ROUGH_VRC_03.iq_stValve, 
-					iq_stValve_NC_second:= CVMI_ROUGH_VRC_01.iq_stValve,
-					ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
-					iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH2_VRC_01.VGC,
-					iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH1_VRC_01.VGC,
-					x_onBeamline:= xOnBeamline),
-	iq_stPtm=> );
+	CVMI_GJ_PTM_04(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
+						i_stTurbo:= CVMI_GJ_PTM_04.iq_stPtm, 
+						i_stISG:= CVMI_GJ_GPI_01.PG, 
+						i_stBSG:= CVMI_ROUGH_GPI_04.PG, 
+						iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
+						iq_stValve_NC:= CVMI_ROUGH_VRC_03.iq_stValve, 
+						iq_stValve_NC_second:= CVMI_ROUGH_VRC_01.iq_stValve,
+						ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
+						iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH2_VRC_01.VGC,
+						iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH1_VRC_01.VGC,
+						x_onBeamline:= xOnBeamline), 
+					i_stGauge:= CVMI_ROUGH_GPI_04.PG, 
+					i_rMaxBackingPressure:= 1, 
+					iq_stPtm=> );
 	
-	CVMI_MAIN_PTM_01(
-	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
-					i_stTurbo:= CVMI_MAIN_PTM_01.iq_stPtm, 
-					i_stISG:= CVMI_CATCH_GPI_01.PG, 
-					i_stBSG:= CVMI_ROUGH_GPI_02.PG, 
-					iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
-					iq_stValve_NC:= CVMI_ROUGH_VRC_01.iq_stValve, 
-					iq_stValve_NC_second:= CVMI_ROUGH_VRC_03.iq_stValve,
-					ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
-					iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH1_VRC_01.VGC,
-					iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH2_VRC_01.VGC,
-					x_onBeamline:= xOnBeamline), 
-	iq_stPtm=> );
+	CVMI_MAIN_PTM_01(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
+						i_stTurbo:= CVMI_MAIN_PTM_01.iq_stPtm, 
+						i_stISG:= CVMI_GJ_GPI_01.PG, 
+						i_stBSG:= CVMI_ROUGH_GPI_02.PG, 
+						iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
+						iq_stValve_NC:= CVMI_ROUGH_VRC_01.iq_stValve, 
+						iq_stValve_NC_second:= CVMI_ROUGH_VRC_03.iq_stValve,
+						ads_Error_Present:= (ITF_TMO_ROUGH1_VRC_01.bError OR ITF_TMO_ROUGH2_VRC_01.bError),
+						iq_stRoughRoughValve_NC:= ITF_TMO_ROUGH1_VRC_01.VGC,
+						iq_stRoughRoughValve_NC_second:=ITF_TMO_ROUGH2_VRC_01.VGC,
+						x_onBeamline:= xOnBeamline), 
+					i_stGauge:= CVMI_ROUGH_GPI_02.PG, 
+					i_rMaxBackingPressure:= 1, 
+					iq_stPtm=> );
 	
 	CVMI_CATCH_PTM_01(
 	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
