@@ -43,6 +43,18 @@
 		<Box File="CVMI_PNL1_EP12_EP2338-0002.xti" Id="44">
 			<EtherCAT PortABoxInfo="#x0100002b"/>
 		</Box>
+		<Box File="KTOF_PNL1_EP00_EP1111.xti" Id="60">
+			<EtherCAT PortABoxInfo="#x01000020"/>
+		</Box>
+		<Box File="KTOF_PNL1_EP01_EP2338-0002.xti" Id="61">
+			<EtherCAT PortABoxInfo="#x0100003c"/>
+		</Box>
+		<Box File="KTOF_PNL1_EP02_EP2624-0002.xti" Id="62">
+			<EtherCAT PortABoxInfo="#x0100003d"/>
+		</Box>
+		<Box File="KTOF_PNL1_EP03_EP6002-0002.xti" Id="63">
+			<EtherCAT PortABoxInfo="#x0100003e"/>
+		</Box>
 		<Box File="Term 45 (EP9128-1021).xti" Id="45">
 			<EtherCAT PortABoxInfo="#x02000020"/>
 		</Box>
