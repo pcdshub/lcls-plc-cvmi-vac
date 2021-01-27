@@ -30,5 +30,9 @@ ELSE
 							(iq_stValve_NC.i_xOpnLS OR(iq_stValve_NO.i_xOpnLS AND iq_stValve_NC_second.i_xOpnLS));
 END_IF]]></ST>
     </Implementation>
+    <LineIds Name="F_Turbo_NC_NO_Valve_Logic">
+      <LineId Id="3" Count="9" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

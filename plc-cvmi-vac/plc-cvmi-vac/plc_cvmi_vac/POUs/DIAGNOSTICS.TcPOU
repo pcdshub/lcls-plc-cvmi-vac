@@ -33,5 +33,9 @@ fbEcatDiag(
 	q_astEcConfSlaveInfo=> aEcSlaveInfo , 
 	q_nSlaves=> nSlaveNumber);]]></ST>
     </Implementation>
+    <LineIds Name="DIAGNOSTICS">
+      <LineId Id="3" Count="9" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

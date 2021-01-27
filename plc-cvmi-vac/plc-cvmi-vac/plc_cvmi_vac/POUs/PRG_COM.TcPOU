@@ -48,5 +48,9 @@ fbSerialLineControl_KTOF_PTM_02(
 	ErrorID=> );
 	]]></ST>
     </Implementation>
+    <LineIds Name="PRG_COM">
+      <LineId Id="3" Count="39" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
