@@ -43,9 +43,6 @@
     <Compile Include="POUs\F_Turbo_NC_NO_Valve_Logic_NC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\F_Turbo_NC_NO_Valve_Logic_NC_Agilent.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>

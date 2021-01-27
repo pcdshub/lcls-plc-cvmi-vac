@@ -6,6 +6,69 @@ VAR_GLOBAL
 	(*TMO Beamline Vacuum*)
 	//Outputs
 	fb_ADS_WATCHDOG_VAC_CVMI_TMO:FB_ADS_WATCHDOG;
+	(*ETHERCAT BRIDGE COM STATUS*)
+	//0: Other side is in OP state, >0: Error
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^SYNC Inputs^TxPDO state			 
+	'}
+	xEcatBridge_TxPDO_state AT %I* : BOOL;
+	
+	//0: External device connected, 1: External device not connected
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^SYNC Inputs^External device not connected			 
+	'}
+	xEcatBridge_External_device_not_connected AT %I* : BOOL;
+	
+	//0 = Data valid, 1 = Data invalid
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^WcState^WcState			 
+	'}
+	xEcatBridge_WcState AT %I* : BOOL;
+	
+	(*I/O Inputs from TMO Beamline*)
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Inputs^HUTCH_PLC_NAME			 
+	'}
+	sHUTCH_PLC_NAME AT %I* : STRING(8);
+	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS			 
+	'}
+	xTMO_ROUGH1_VRC_01_OPEN_LS AT %I* : BOOL;
+	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS			 
+	'}
+	xTMO_ROUGH2_VRC_01_OPEN_LS AT %I* : BOOL;
+	
+	
+	(*I/O Outputs to TMO Beamline*)
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^ENDSTATION_PLC_NAME			 
+	'}
+	sENDSTATION_PLC_NAME AT %Q* : STRING(8):= 'CVMI';
+	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_ROUGH_VRC_01_OPEN_LS			 
+	'}
+	xIP1_ROUGH_VRC_01_OPEN_LS AT %Q* : BOOL;
+	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_ROUGH_VRC_02_OPEN_LS			 
+	'}
+	xIP1_ROUGH_VRC_02_OPEN_LS AT %Q* : BOOL;
+	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_ROUGH_VRC_03_OPEN_LS			 
+	'}
+	xIP1_ROUGH_VRC_03_OPEN_LS AT %Q* : BOOL;
+	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_TURBO_FAULT			 
+	'}
+	xIP1_TURBO_FAULT AT %Q* : BOOL;
+	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_xAT_VAC			 
+	'}
+	xIP1_MAIN_xAT_VAC AT %Q* : BOOL;
+	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_xPRESS_OK			 
+	'}
+	xIP1_MAIN_xPRESS_OK AT %Q* : BOOL;
+	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_rPRESS			 
+	'}
+	rIP1_MAIN_rPRESS AT %Q* : REAL;
+	
 	
 	(*ISEG HV Crate Safety Loop*)
 	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E13_EL2794]^Channel 4^Output			 

@@ -36,6 +36,6 @@
 		<Box File="CVMI_PNL1_EP00_EP9128-0021.xti" Id="32">
 			<EtherCAT PortABoxInfo="#x0100000f"/>
 		</Box>
-		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120"/>
+		<EtherCAT DcSyncMode="3" EnableVirtualSwitch="true" MaxSwitchPorts="4" MaxSwitchFrames="160"/>
 	</Device>
 </TcSmItem>
