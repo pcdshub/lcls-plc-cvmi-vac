@@ -66,7 +66,7 @@ b_TurboPumpRunningFlag :=
 	(KTOF_PTM_02.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
 	(CVMI_ROUGH_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING);	
 TurboPumpTOF(IN:= b_TurboPumpRunningFlag, PT := TurboPumpDelayTime);
-xIP1_TURBO_FAULT:= TurboPumpTOF.Q;
+xIP1_TURBOS_ALL_AtSpd:= TurboPumpTOF.Q;
 (*High Voltage Saftey Loop*)// rHighVoltageMinPressure = 1e-05; (*Hard coded High voltage Minimum Enable Pressure*)
 xHighVoltageSafteyLoopEnable:= (CVMI_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPressure) AND (CVMI_MAIN_GHC_01.IG.xPRESS_OK = TRUE);
 

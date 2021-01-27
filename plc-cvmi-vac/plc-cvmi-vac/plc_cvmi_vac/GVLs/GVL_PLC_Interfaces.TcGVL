@@ -53,9 +53,9 @@ VAR_GLOBAL
 	'}
 	xIP1_ROUGH_VRC_03_OPEN_LS AT %Q* : BOOL;
 	
-	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_TURBO_FAULT			 
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_TURBOS_ALL_AtSpd			 
 	'}
-	xIP1_TURBO_FAULT AT %Q* : BOOL;
+	xIP1_TURBOS_ALL_AtSpd AT %Q* : BOOL;
 	
 	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_xAT_VAC			 
 	'}
