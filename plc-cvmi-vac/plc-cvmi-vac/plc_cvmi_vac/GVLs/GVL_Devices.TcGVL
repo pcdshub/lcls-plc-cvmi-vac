@@ -112,10 +112,10 @@ VAR_GLOBAL
 								 .q_xReset 			:=	TIIB[CVMI_PNL1_EP02_EP2624-0002]^Channel 2^Output				 
 	'}
 	{attribute 'pytmc' := '
-		pv: KTOF:PTM:02
+		pv: CVMI:KTOF:PTM:02
 		io: io
 	'}
-	KTOF_PTM_02 : FB_PTM_Pfeiffer;
+	CVMI_KTOF_PTM_02 : FB_PTM_Pfeiffer;
 	
 (*KTOF Turbo Pump*)
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 1^Input;
@@ -125,10 +125,10 @@ VAR_GLOBAL
 								 .q_xReset 			:=	TIIB[KTOF_PNL1_EP02_EP2624-0002]^Channel 2^Output				 
 	'}
 	{attribute 'pytmc' := '
-		pv: KTOF:PTM:01
+		pv: CVMI:KTOF:PTM:01
 		io: io
 	'}
-	KTOF_PTM_01 : FB_PTM_Pfeiffer;
+	CVMI_KTOF_PTM_01 : FB_PTM_Pfeiffer;
 	
 (*Pirani MKS 275 Gauges*)
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[CVMI_PNL1_EP07_EP3174-0002]^AI Standard Channel 1^Value
@@ -258,13 +258,13 @@ VAR_GLOBAL
 	st_Pfeiffer_RBK_CVMI_ROUGH_PTM_01 			: ARRAY[1..20] OF ST_PfeifferStatus;
 	fb_PfeifferCom_CVMI_ROUGH_PTM_01 			: FB_PFEIFFER_COM;
 	
-	st_Pfeiffer_CTRL_KTOF_PTM_01 		: ARRAY[1..20] OF ST_PfeifferControl;
-	st_Pfeiffer_RBK_KTOF_PTM_01 			: ARRAY[1..20] OF ST_PfeifferStatus;
-	fb_PfeifferCom_KTOF_PTM_01 			: FB_PFEIFFER_COM;
+	st_Pfeiffer_CTRL_CVMI_KTOF_PTM_01 		: ARRAY[1..20] OF ST_PfeifferControl;
+	st_Pfeiffer_RBK_CVMI_KTOF_PTM_01 			: ARRAY[1..20] OF ST_PfeifferStatus;
+	fb_PfeifferCom_CVMI_KTOF_PTM_01 			: FB_PFEIFFER_COM;
 	
-	st_Pfeiffer_CTRL_KTOF_PTM_02 		: ARRAY[1..20] OF ST_PfeifferControl;
-	st_Pfeiffer_RBK_KTOF_PTM_02 			: ARRAY[1..20] OF ST_PfeifferStatus;
-	fb_PfeifferCom_KTOF_PTM_02 			: FB_PFEIFFER_COM;
+	st_Pfeiffer_CTRL_CVMI_KTOF_PTM_02 		: ARRAY[1..20] OF ST_PfeifferControl;
+	st_Pfeiffer_RBK_CVMI_KTOF_PTM_02 			: ARRAY[1..20] OF ST_PfeifferStatus;
+	fb_PfeifferCom_CVMI_KTOF_PTM_02 			: FB_PFEIFFER_COM;
 	
 (*Varian/Agilent serial goes through Moxa serial ports*)
 	

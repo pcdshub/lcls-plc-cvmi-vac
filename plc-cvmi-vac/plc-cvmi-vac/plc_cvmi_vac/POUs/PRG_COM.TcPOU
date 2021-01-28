@@ -27,23 +27,23 @@ fbSerialLineControl_CVMI_ROUGH_PTM_01(
 	Error=> ,
 	ErrorID=> );
 	
-fbSerialLineControl_KTOF_PTM_01(
+fbSerialLineControl_CVMI_KTOF_PTM_01(
 	Mode:= SERIALLINEMODE_EL6_22B,
-	pComIn:= ADR(stComIn_KTOF_PTM_01),
-	pComOut:=ADR(stComOut_KTOF_PTM_01),
-	SizeComIn:= SIZEOF(stComIn_KTOF_PTM_01),
-	TxBuffer:= SerialTXBuffer_KTOF_PTM_01,
-	RxBuffer:= SerialRXBuffer_KTOF_PTM_01,
+	pComIn:= ADR(stComIn_CVMI_KTOF_PTM_01),
+	pComOut:=ADR(stComOut_CVMI_KTOF_PTM_01),
+	SizeComIn:= SIZEOF(stComIn_CVMI_KTOF_PTM_01),
+	TxBuffer:= SerialTXBuffer_CVMI_KTOF_PTM_01,
+	RxBuffer:= SerialRXBuffer_CVMI_KTOF_PTM_01,
 	Error=> ,
 	ErrorID=> );
 	
-fbSerialLineControl_KTOF_PTM_02(
+fbSerialLineControl_CVMI_KTOF_PTM_02(
 	Mode:= SERIALLINEMODE_EL6_22B,
-	pComIn:= ADR(stComIn_KTOF_PTM_02),
-	pComOut:=ADR(stComOut_KTOF_PTM_02),
-	SizeComIn:= SIZEOF(stComIn_KTOF_PTM_02),
-	TxBuffer:= SerialTXBuffer_KTOF_PTM_02,
-	RxBuffer:= SerialRXBuffer_KTOF_PTM_02,
+	pComIn:= ADR(stComIn_CVMI_KTOF_PTM_02),
+	pComOut:=ADR(stComOut_CVMI_KTOF_PTM_02),
+	SizeComIn:= SIZEOF(stComIn_CVMI_KTOF_PTM_02),
+	TxBuffer:= SerialTXBuffer_CVMI_KTOF_PTM_02,
+	RxBuffer:= SerialRXBuffer_CVMI_KTOF_PTM_02,
 	Error=> ,
 	ErrorID=> );
 	]]></ST>
