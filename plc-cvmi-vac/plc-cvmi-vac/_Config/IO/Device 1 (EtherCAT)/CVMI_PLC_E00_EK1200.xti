@@ -25,20 +25,20 @@
 		<Box File="CVMI_PLC_E06_EL1088.xti" Id="6">
 			<EtherCAT PortABoxInfo="#x01000005"/>
 		</Box>
-		<Box File="CVMI_PLC_E07_EL2794.xti" Id="7">
+		<Box File="CVMI_PLC_E07_EL2088.xti" Id="23">
 			<EtherCAT PortABoxInfo="#x01000006"/>
 		</Box>
 		<Box File="CVMI_PLC_E08_EL3064.xti" Id="8">
-			<EtherCAT PortABoxInfo="#x01000007"/>
+			<EtherCAT PortABoxInfo="#x01000017"/>
 		</Box>
 		<Box File="CVMI_PLC_E09_EL1088.xti" Id="9">
 			<EtherCAT PortABoxInfo="#x01000008"/>
 		</Box>
-		<Box File="CVMI_PLC_E10_EL2794.xti" Id="10">
+		<Box File="CVMI_PLC_E10_EL2088.xti" Id="28">
 			<EtherCAT PortABoxInfo="#x01000009"/>
 		</Box>
 		<Box File="CVMI_PLC_E11_EL3064.xti" Id="11">
-			<EtherCAT PortABoxInfo="#x0100000a"/>
+			<EtherCAT PortABoxInfo="#x0100001c"/>
 		</Box>
 		<Box File="CVMI_PLC_E12_EL1088.xti" Id="12">
 			<EtherCAT PortABoxInfo="#x0100000b"/>
