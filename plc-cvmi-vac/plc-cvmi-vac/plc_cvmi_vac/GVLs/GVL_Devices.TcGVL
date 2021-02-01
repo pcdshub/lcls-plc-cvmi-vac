@@ -8,8 +8,8 @@ VAR_GLOBAL
 								 .i_xLSpd			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 2^Input;
 								 .i_xSTART			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 3^Input;
 								 .i_xFault			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 4^Input;
-								 .q_RunDO			:=	TIIB[CVMI_PLC_E07_EL2794]^Channel 1^Output;
-							     .q_xLSpd			:=	TIIB[CVMI_PLC_E07_EL2794]^Channel 2^Output;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E07_EL2088]^Channel 1^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E07_EL2088]^Channel 2^Output;
 								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E08_EL3064]^AI Standard Channel 1^Value;
 							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E08_EL3064]^AI Standard Channel 2^Value			 
 	'} 
@@ -23,8 +23,8 @@ VAR_GLOBAL
 								 .i_xLSpd			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 6^Input;
 								 .i_xSTART			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 7^Input;
 								 .i_xFault			:=	TIIB[CVMI_PLC_E06_EL1088]^Channel 8^Input;
-								 .q_RunDO			:=	TIIB[CVMI_PLC_E07_EL2794]^Channel 3^Output;
-							     .q_xLSpd			:=	TIIB[CVMI_PLC_E07_EL2794]^Channel 4^Output;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E07_EL2088]^Channel 7^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E07_EL2088]^Channel 8^Output;
 								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E08_EL3064]^AI Standard Channel 3^Value;
 							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E08_EL3064]^AI Standard Channel 4^Value			 
 	'} 
@@ -38,8 +38,8 @@ VAR_GLOBAL
 								 .i_xLSpd			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 2^Input;
 								 .i_xSTART			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 3^Input;
 								 .i_xFault			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 4^Input;
-								 .q_RunDO			:=	TIIB[CVMI_PLC_E10_EL2794]^Channel 1^Output;
-							     .q_xLSpd			:=	TIIB[CVMI_PLC_E10_EL2794]^Channel 2^Output;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E10_EL2088]^Channel 1^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E10_EL2088]^Channel 2^Output;
 								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E11_EL3064]^AI Standard Channel 1^Value;
 							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E11_EL3064]^AI Standard Channel 2^Value			 
 	'} 
@@ -53,8 +53,8 @@ VAR_GLOBAL
 								 .i_xLSpd			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 6^Input;
 								 .i_xSTART			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 7^Input;
 								 .i_xFault			:=	TIIB[CVMI_PLC_E09_EL1088]^Channel 8^Input;
-								 .q_RunDO			:=	TIIB[CVMI_PLC_E10_EL2794]^Channel 3^Output;
-							     .q_xLSpd			:=	TIIB[CVMI_PLC_E10_EL2794]^Channel 4^Output;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E10_EL2088]^Channel 7^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E10_EL2088]^Channel 8^Output;
 								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E11_EL3064]^AI Standard Channel 3^Value;
 							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E11_EL3064]^AI Standard Channel 4^Value			 
 	'}
@@ -68,8 +68,8 @@ VAR_GLOBAL
 								 .i_xLSpd			:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 2^Input;
 								 .i_xSTART			:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 3^Input;
 								 .i_xFault			:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 4^Input;
-								 .q_RunDO			:=	TIIB[CVMI_PLC_E13_EL2794]^Channel 1^Output;
-							     .q_xLSpd			:=	TIIB[CVMI_PLC_E13_EL2794]^Channel 2^Output;
+								 .q_RunDO			:=	TIIB[CVMI_PLC_E10_EL2088]^Channel 3^Output;
+							     .q_xLSpd			:=	TIIB[CVMI_PLC_E10_EL2088]^Channel 4^Output;
 								 .i_iCurrentMon		:=	TIIB[CVMI_PLC_E14_EL3064]^AI Standard Channel 1^Value;
 							     .i_iRawSpeed		:=	TIIB[CVMI_PLC_E14_EL3064]^AI Standard Channel 2^Value			 
 	'}
