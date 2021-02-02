@@ -137,6 +137,25 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_COM.stComIn_CVMI_CATCH_PTM_01</Name>
+					<Comment>
+						<![CDATA[SERIAL IO]]>
+					</Comment>
+					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComIn_CVMI_ROUGH_PTM_01</Name>
+					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComIn_CVMI_KTOF_PTM_01</Name>
+					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComIn_CVMI_KTOF_PTM_02</Name>
+					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
 					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -555,25 +574,6 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_COM.stComIn_CVMI_CATCH_PTM_01</Name>
-					<Comment>
-						<![CDATA[SERIAL IO]]>
-					</Comment>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComIn_CVMI_ROUGH_PTM_01</Name>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComIn_CVMI_KTOF_PTM_01</Name>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComIn_CVMI_KTOF_PTM_02</Name>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.sHUTCH_PLC_NAME</Name>
 					<Comment>
 						<![CDATA[I/O Inputs from TMO Beamline]]>
@@ -583,6 +583,22 @@
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
+				<Var>
+					<Name>GVL_COM.stComOut_CVMI_CATCH_PTM_01</Name>
+					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComOut_CVMI_ROUGH_PTM_01</Name>
+					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComOut_CVMI_KTOF_PTM_01</Name>
+					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComOut_CVMI_KTOF_PTM_02</Name>
+					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
 					<Type>BOOL</Type>
@@ -762,22 +778,6 @@
 				<Var>
 					<Name>GVL_Devices.CVMI_ROUGH_VRC_02.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComOut_CVMI_CATCH_PTM_01</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComOut_CVMI_ROUGH_PTM_01</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComOut_CVMI_KTOF_PTM_01</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComOut_CVMI_KTOF_PTM_02</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
