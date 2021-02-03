@@ -11,7 +11,7 @@ VAR_GLOBAL
 	
 	{attribute 'pytmc' := '
 		pv: PLC:CVMI:ON:BEAMLINE
-		io:io
+		io:i
 	'}
 	xOnBeamline	:	BOOL := TRUE; (*Always assume On Beamline for safety checks*)
 	

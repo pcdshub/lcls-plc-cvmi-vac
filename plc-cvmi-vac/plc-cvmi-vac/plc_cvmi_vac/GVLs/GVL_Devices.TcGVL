@@ -77,7 +77,7 @@ VAR_GLOBAL
 		pv: CVMI:MAIN:PTM:01
 		io: io
 	'}
-	CVMI_MAIN_PTM_01 : FB_PTM_Agilent;
+	CVMI_MAIN_PTM_01 : FB_PTM_Agilent_NoFeedback;
 	
 	
 (*Onboard Turbo Pumps*)

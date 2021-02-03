@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_PTM_Agilent_NoFeedback" Id="{cb2eb156-7e3f-48fe-afc1-860bf870e3b3}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PTM_Agilent_NoFeedback EXTENDS FB_Pump
+VAR_INPUT
+	i_xExtILKOk : BOOL; // Connect to external interlock logic(e.g TURBO_ILK Function), TRUE if not used.
+	i_stGauge	:	ST_VG; //Pirani backing gauge for pump interlock 
+	i_rMaxBackingPressure : REAL;
+END_VAR
+VAR_OUTPUT
+	{attribute 'pytmc' :=' pv:'}
+	iq_stPtm	:	ST_AgilentPTM;
+END_VAR
+VAR
+	{attribute 'instance-path'}
+	{attribute 'noinit'}
+	sPath: STRING;
+	//xRunOk	:	BOOL;
+	nMaxR1Fault: INT :=5;
+	nR1Fault : INT;
+	tFaultWindowDuration : TIME := T#300S;
+	tR1FaultDuration : TIME := T#120S;
+	tTimeOutDuration: TIME:= T#10M;
+	tFaultWindowElapsed: TON;
+	tR1Fault : TON;
+	tStartTimeOut : TON;
+	tR1TimeOut: TON;
+	step : INT :=0;
+	nErrorCode: INT :=0;
+	xBackingPressureOK: BOOL;
+	iMaxSpeed : INT:=963;
+	
+	rPowerScale: REAL:=10;//W
+	rCurrentScale: REAL:=1;//A
+	
+	(*I/Os*)
+	i_xSTART 	AT%I*:	BOOL;
+	i_xR1	AT%I*	:  BOOL;
+	i_xR2	AT%I*	:  BOOL;
+	i_xLSpd	AT%I*:  BOOL;
+	i_iTempMon AT%I*: INT;
+	i_iPowerMon AT%I*: INT;
+	i_iCurrentMon AT%I*: INT;
+	i_iRawSpeed AT %I* : INT; 
+	i_xFault AT%I*	:	BOOL;
+	q_RunDO AT%Q*	:	BOOL;
+	q_xLSpd	AT%Q*	:  BOOL;
+    
+    
+    // For logging
+  //  Msg : FB_FormatString;
+   // fbJson : FB_JsonSaxWriter;
+   tOverrideActivated : R_TRIG;
+	
+	iTermBits: UINT := 32767 ; // The terminal's maximum value in bits
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(* Basic Agilent Turbo Controls *)
+(* Allen Pai, 2021-02-02 *)
+
+(*FB_Input Link ingto Data Structure*)
+iq_stPtm.xExtRunOk := i_xExtILKOk;
+(*Validate Backing Pressure set point doesn't exceed the Maximum backingPressure*)
+iq_stPtm.rBackingPressureSP := BackingPressureSetPoint(iq_stPtm.rBackingPressureSP,i_rMaxBackingPressure);
+
+(* state machine *)
+CASE (step) OF
+(*Pump Stopped State*)
+	0: // Pump Stopped State
+		iq_stPtm.xRunSW:=FALSE;
+		//Reset Output signals;
+		iq_stPtm.q_RunDO:=FALSE;
+		iq_stPtm.q_xSS := FALSE;
+		iq_stPtm.q_xLSpd:= FALSE;
+		iq_stPtm.eState := pumpSTOPPED;
+		step:=10;
+		
+(*Idle State waiting to start*)	
+	10: // Idle State, waiting for the xRunSwitch
+		IF iq_stPtm.xExtRunOk  AND iq_stPTM.xRunSW THEN
+			iq_stPtm.q_RunDO := iq_stPTM.xRunSW; //
+			step:=20;
+		END_IF
+
+		
+(*Pump On State*)	
+	20: // Pump is On
+		iq_stPtm.q_RunDO := iq_stPTM.xRunSW; // done in previous state
+		//If External Interlock is false or Operator has stopped pump, turn off pump
+		IF (iq_stPtm.xExtRunOk= FALSE) OR (iq_stPTM.xRunSW = FALSE) THEN
+			step:= 0;
+		ELSE
+			step:=20;
+		END_IF
+END_CASE
+
+(*Check backing gauge pressure*)
+//xBackingPressureOK := i_stGauge.xPRESS_OK AND ( i_stGauge.rPRESS < iq_stPtm.rBackingPressureSP);
+
+(* IO Mapping*)
+IO();
+(*Assign Error Message*)
+//iq_stPtm.sError := ErrorMessage(nErrorCode, iq_stPtm.eState);
+// Log States and triggers
+//ACT_Logger();
+
+ACT_Interlock();
+]]></ST>
+    </Implementation>
+    <Action Name="ACT_Interlock" Id="{5e7862f2-c7a8-4e45-afd4-ac1a5f6a4ad4}">
+      <Implementation>
+        <ST><![CDATA[This^.tILK(IN:= (i_stGauge.rPRESS>=iq_stPtm.rBackingPressureSP), PT:=T#5S, Q=> );]]></ST>
+      </Implementation>
+    </Action>
+    <Method Name="BackingPressureSetPoint" Id="{167982aa-a2b8-40d9-9c64-b30de296433b}">
+      <Declaration><![CDATA[METHOD BackingPressureSetPoint : REAL
+VAR_INPUT
+	i_SetPoint : REAL;
+	rMaxBackingPressure: REAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[BackingPressureSetPoint := Min(i_SetPoint , rMaxBackingPressure);]]></ST>
+      </Implementation>
+    </Method>
+    <Action Name="IO" Id="{2f6d0b8a-91f1-4e9e-a012-c189d0d51d98}">
+      <Implementation>
+        <ST><![CDATA[(*inputs*)
+iq_stPtm.i_xSTART:=	i_xSTART;
+iq_stPtm.i_xR1:=	i_xR1;
+iq_stPtm.i_xR2:=	i_xR2;
+iq_stPtm.i_xLSpd:=	i_xLSpd;
+iq_stPtm.i_xFault:=	i_xFault;
+(* Real-value calculation *)
+If (iTermBits=0) THEN iTermBits := 32767;END_IF
+iq_stPtm.i_rCurrentMon := (10*INT_TO_REAL(i_iCurrentMon)/iTermBits)*rCurrentScale; 
+iq_stPtm.i_rTempMon := 10*INT_TO_REAL(i_iTempMon)/iTermBits; 
+iq_stPtm.i_rPowerMon := (10*INT_TO_REAL(i_iPowerMon)/iTermBits)*rPowerScale; 
+iq_stPtm.i_diCurSpd := 10*LREAL_TO_DINT(INT_TO_REAL(i_iRawSpeed)/iTermBits);
+
+
+(*outputs*)
+q_RunDO := iq_stPtm.q_RunDO;
+q_xLSpd := iq_stPtm.q_xLSpd;
+]]></ST>
+      </Implementation>
+    </Action>
+    <LineIds Name="FB_PTM_Agilent_NoFeedback">
+      <LineId Id="56" Count="1" />
+      <LineId Id="225" Count="0" />
+      <LineId Id="222" Count="0" />
+      <LineId Id="221" Count="0" />
+      <LineId Id="224" Count="0" />
+      <LineId Id="223" Count="0" />
+      <LineId Id="226" Count="0" />
+      <LineId Id="62" Count="8" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="236" Count="0" />
+      <LineId Id="229" Count="0" />
+      <LineId Id="231" Count="4" />
+      <LineId Id="230" Count="0" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="82" Count="2" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="220" Count="0" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="93" Count="0" />
+      <LineId Id="228" Count="0" />
+      <LineId Id="227" Count="0" />
+      <LineId Id="156" Count="0" />
+      <LineId Id="173" Count="2" />
+      <LineId Id="206" Count="6" />
+      <LineId Id="214" Count="1" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_PTM_Agilent_NoFeedback.ACT_Interlock">
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_PTM_Agilent_NoFeedback.BackingPressureSetPoint">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_PTM_Agilent_NoFeedback.IO">
+      <LineId Id="2" Count="16" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
