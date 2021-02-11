@@ -73,6 +73,10 @@ VAR_GLOBAL
 	'}
 	rIP1_MAIN_rPRESS AT %Q* : REAL;
 	
+	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_HV_SAFETY_ENABLE			 
+	'}
+	xIP1_HV_SAFETY_ENABLE AT %Q* : BOOL;
+	
 	
 	(*ISEG HV Crate Safety Loop*)
 	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E13_EL2794]^Channel 4^Output			 

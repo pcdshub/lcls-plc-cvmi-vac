@@ -317,6 +317,7 @@ xIP1_ROUGH_VRC_03_OPEN_LS 	:= 	CVMI_ROUGH_VRC_03.M_IsOpen();
 xIP1_MAIN_xAT_VAC 			:= 	CVMI_MAIN_GHC_01.IG.xAT_VAC;
 xIP1_MAIN_xPRESS_OK 		:= 	CVMI_MAIN_GHC_01.IG.xPRESS_OK;
 rIP1_MAIN_rPRESS 			:= 	CVMI_MAIN_GHC_01.IG.rPRESS;
+xIP1_HV_SAFETY_ENABLE		:=	xHighVoltageSafteyLoopEnable;
 	
 	]]></ST>
     </Implementation>
@@ -348,6 +349,7 @@ rIP1_MAIN_rPRESS 			:= 	CVMI_MAIN_GHC_01.IG.rPRESS;
       <LineId Id="311" Count="0" />
       <LineId Id="315" Count="0" />
       <LineId Id="293" Count="0" />
+      <LineId Id="357" Count="0" />
       <LineId Id="266" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
