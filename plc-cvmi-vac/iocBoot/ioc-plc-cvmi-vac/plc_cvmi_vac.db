@@ -1,3 +1,28 @@
+record(bi, "PLC:CVMI:VAC:IP1_TURBOS_ALL_ATSPD_RBV") {
+  field(DESC, "GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:CVMI:VAC:HV_SAFETY_ENABLE_RBV") {
+  # GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable
+  field(DESC, "GVL_PLC_Interfaces.x...eSafteyLoopEnable")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
 record(bi, "$(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV") {
   field(DESC, "Tripped by overall log count")
   field(SCAN, "I/O Intr")
@@ -7784,16 +7809,6 @@ record(bi, "PLC:CVMI:ON:BEAMLINE_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Variables.xOnBeamline?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bo, "PLC:CVMI:ON:BEAMLINE") {
-  field(DESC, "GVL_Variables.xOnBeamline")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Variables.xOnBeamline=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "VAL")
   info(archive, "VAL")
 }
 
