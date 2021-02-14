@@ -68,7 +68,7 @@ b_TurboPumpRunningFlag :=
 TurboPumpTOF(IN:= b_TurboPumpRunningFlag, PT := TurboPumpDelayTime);
 xIP1_TURBOS_ALL_AtSpd:= TurboPumpTOF.Q;
 (*High Voltage Saftey Loop*)// rHighVoltageMinPressure = 1e-05; (*Hard coded High voltage Minimum Enable Pressure*)
-xHighVoltageSafteyLoopEnable:= (CVMI_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPressure) AND (CVMI_MAIN_GHC_01.IG.xPRESS_OK = TRUE);
+xHighVoltageSafteyLoopEnable:= (CVMI_CATCH_GCC_01.IG.rPRESS <= rHighVoltageMinPressure) AND (CVMI_CATCH_GCC_01.IG.xPRESS_OK = TRUE);
 
 (*PIRANI Gauges*)
 	CVMI_GJ_GPI_01.M_SetBits(32767);
@@ -314,9 +314,9 @@ xIP1_ROUGH_VRC_01_OPEN_LS 	:=	CVMI_ROUGH_VRC_01.M_IsOpen();
 xIP1_ROUGH_VRC_02_OPEN_LS	:=	CVMI_ROUGH_VRC_02.M_IsOpen();
 xIP1_ROUGH_VRC_03_OPEN_LS 	:= 	CVMI_ROUGH_VRC_03.M_IsOpen();
 //xIP1_TURBO_FAULT AT %Q* : BOOL; already updated at turbo pump logic.
-xIP1_MAIN_xAT_VAC 			:= 	CVMI_MAIN_GHC_01.IG.xAT_VAC;
-xIP1_MAIN_xPRESS_OK 		:= 	CVMI_MAIN_GHC_01.IG.xPRESS_OK;
-rIP1_MAIN_rPRESS 			:= 	CVMI_MAIN_GHC_01.IG.rPRESS;
+xIP1_MAIN_xAT_VAC 			:= 	CVMI_CATCH_GCC_01.IG.xAT_VAC;
+xIP1_MAIN_xPRESS_OK 		:= 	CVMI_CATCH_GCC_01.IG.xPRESS_OK;
+rIP1_MAIN_rPRESS 			:= 	CVMI_CATCH_GCC_01.IG.rPRESS;
 xIP1_HV_SAFETY_ENABLE		:=	xHighVoltageSafteyLoopEnable;
 	
 	]]></ST>
