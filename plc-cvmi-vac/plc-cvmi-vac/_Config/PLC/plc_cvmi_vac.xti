@@ -799,6 +799,10 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable</Name>
 					<Comment>
 						<![CDATA[When Enables the High voltage Saftey loop is closed and HV can start.]]>
@@ -808,10 +812,6 @@
 				<Var>
 					<Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
 					<Type>REAL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
-					<Type>BOOL</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
