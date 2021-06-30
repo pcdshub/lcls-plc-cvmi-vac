@@ -56,7 +56,7 @@ VAR_GLOBAL
 	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E04_EL6692]^IO Outputs^IP1_TURBOS_ALL_AtSpd			 
 	'}
 	{attribute 'pytmc' := '
-		pv: PLC:CVMI:VAC:IP1_TURBOS_ALL_ATSPD
+		pv: TMO:PLC:CVMI:VAC:IP1_TURBOS_ALL_ATSPD
 		io:i
 	'}
 	xIP1_TURBOS_ALL_AtSpd AT %Q* : BOOL;
@@ -82,7 +82,7 @@ VAR_GLOBAL
 	{attribute 'TcLinkTo' := 	'TIIB[CVMI_PLC_E13_EL2794]^Channel 4^Output			 
 	'}
 	{attribute 'pytmc' := '
-		pv: PLC:CVMI:VAC:HV_SAFETY_ENABLE
+		pv: TMO:PLC:CVMI:VAC:HV_SAFETY_ENABLE
 		io:i
 	'}
 	xHighVoltageSafteyLoopEnable AT %Q* : BOOL := FALSE; (*When Enables the High voltage Saftey loop is closed and HV can start.*)
