@@ -4,13 +4,13 @@
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
 	{attribute 'pytmc' := '
-		pv: PLC:CVMI:VAC:OVRDON
+		pv: TMO:PLC:CVMI:VAC:OVRDON
 		io: io
 	'}
 	xSystemOverrideMode_CVMI	: BOOL := FALSE; (* Global system override for the HXR Vacuum System EBD*)
 	
 	{attribute 'pytmc' := '
-		pv: PLC:CVMI:ON:BEAMLINE
+		pv: TMO:PLC:CVMI:ON:BEAMLINE
 		io:i
 	'}
 	xOnBeamline	:	BOOL := TRUE; (*Always assume On Beamline for safety checks*)
