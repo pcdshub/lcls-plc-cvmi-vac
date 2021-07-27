@@ -133,12 +133,13 @@ iq_stPtm.i_xR2:=	i_xR2;
 iq_stPtm.i_xLSpd:=	i_xLSpd;
 iq_stPtm.i_xFault:=	i_xFault;
 (* Real-value calculation *)
-If (iTermBits=0) THEN iTermBits := 32767;END_IF
-iq_stPtm.i_rCurrentMon := (10*INT_TO_REAL(i_iCurrentMon)/iTermBits)*rCurrentScale; 
+If (iTermBits=0) THEN iTermBits := 32767;
+END_IF
+(*iq_stPtm.i_rCurrentMon := (10*(i_iCurrentMon)/iTermBits)*rCurrentScale; 
 iq_stPtm.i_rTempMon := 10*INT_TO_REAL(i_iTempMon)/iTermBits; 
 iq_stPtm.i_rPowerMon := (10*INT_TO_REAL(i_iPowerMon)/iTermBits)*rPowerScale; 
 iq_stPtm.i_diCurSpd := 10*LREAL_TO_DINT(INT_TO_REAL(i_iRawSpeed)/iTermBits);
-
+*)
 
 (*outputs*)
 q_RunDO := iq_stPtm.q_RunDO;
@@ -182,7 +183,9 @@ q_xLSpd := iq_stPtm.q_xLSpd;
       <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="FB_PTM_Agilent_NoFeedback.IO">
-      <LineId Id="2" Count="16" />
+      <LineId Id="2" Count="7" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="10" Count="8" />
       <LineId Id="1" Count="0" />
     </LineIds>
   </POU>
