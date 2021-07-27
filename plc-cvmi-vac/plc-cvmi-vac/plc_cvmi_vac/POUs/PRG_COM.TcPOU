@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <POU Name="PRG_COM" Id="{cd596418-8e0a-453c-867e-618b97030684}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_COM
 VAR
@@ -7,15 +7,6 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*Instanitate Serial port com function *) 
-fbSerialLineControl_CVMI_CATCH_PTM_01(
-	Mode:= SERIALLINEMODE_EL6_22B,
-	pComIn:= ADR(stComIn_CVMI_CATCH_PTM_01),
-	pComOut:=ADR(stComOut_CVMI_CATCH_PTM_01),
-	SizeComIn:= SIZEOF(stComIn_CVMI_CATCH_PTM_01),
-	TxBuffer:= SerialTXBuffer_CVMI_CATCH_PTM_01,
-	RxBuffer:= SerialRXBuffer_CVMI_CATCH_PTM_01,
-	Error=> ,
-	ErrorID=> );
 	
 fbSerialLineControl_CVMI_ROUGH_PTM_01(
 	Mode:= SERIALLINEMODE_EL6_22B,
@@ -48,9 +39,5 @@ fbSerialLineControl_CVMI_KTOF_PTM_02(
 	ErrorID=> );
 	]]></ST>
     </Implementation>
-    <LineIds Name="PRG_COM">
-      <LineId Id="3" Count="39" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

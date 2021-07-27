@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <GVL Name="GVL_COM" Id="{ad1b8ec8-1834-4acd-bae0-bacc695815f8}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
 	// Define COM Ports/Buffers incl. library Tc2_SerialCom
-	SerialRXBuffer_CVMI_CATCH_PTM_01 : ComBuffer;
-	SerialTXBuffer_CVMI_CATCH_PTM_01 : ComBuffer;
 	SerialRXBuffer_CVMI_ROUGH_PTM_01 : ComBuffer;
 	SerialTXBuffer_CVMI_ROUGH_PTM_01 : ComBuffer;
 	SerialRXBuffer_CVMI_KTOF_PTM_01 : ComBuffer;
@@ -14,64 +12,11 @@ VAR_GLOBAL
 	SerialTXBuffer_CVMI_KTOF_PTM_02 : ComBuffer;
 	
 	// Serial Terminal
-	fbSerialLineControl_CVMI_CATCH_PTM_01: SerialLineControl;
 	fbSerialLineControl_CVMI_ROUGH_PTM_01: SerialLineControl;
 	fbSerialLineControl_CVMI_KTOF_PTM_01: SerialLineControl;
 	fbSerialLineControl_CVMI_KTOF_PTM_02: SerialLineControl;
 	
 	//SERIAL IO
-	{attribute	'TcLinkTo'	:=	'.Status:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Status;
-								 .D[0]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
-								 .D[1]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 1;
-								 .D[2]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 2;
-								 .D[3]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 3;
-								 .D[4]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 4;
-								 .D[5]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 5;
-								 .D[6]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 6;
-								 .D[7]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 7;
-								 .D[8]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 8;
-								 .D[9]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 9;
-								 .D[10]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 10;
-								 .D[11]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 11;
-								 .D[12]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 12;
-								 .D[13]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 13;
-								 .D[14]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 14;
-								 .D[15]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 15;
-								 .D[16]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 16;
-								 .D[17]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 17;
-								 .D[18]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
-								 .D[19]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
-								 .D[20]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
-								 .D[21]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21;
-	'}
-	stComIn_CVMI_CATCH_PTM_01		AT %I*	:	EL6inData22B;
-	
-	{attribute	'TcLinkTo'	:=	'.Ctrl:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Ctrl;
-								 .D[0]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 0;
-								 .D[1]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 1;
-								 .D[2]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 2;
-								 .D[3]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 3;
-								 .D[4]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 4;
-								 .D[5]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 5;
-								 .D[6]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 6;
-								 .D[7]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 7;
-								 .D[8]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 8;
-								 .D[9]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 9;
-								 .D[10]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 10;
-								 .D[11]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 11;
-								 .D[12]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 12;
-								 .D[13]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 13;
-								 .D[14]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 14;
-								 .D[15]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 15;
-								 .D[16]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 16;
-								 .D[17]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 17;
-								 .D[18]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
-								 .D[19]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
-								 .D[20]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
-								 .D[21]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
-	'}
-	stComOut_CVMI_CATCH_PTM_01		AT %Q*	:	EL6outData22B;
-	
 	{attribute	'TcLinkTo'	:=	'.Status:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Status;
 								 .D[0]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Data In 0;
 								 .D[1]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Data In 1;
