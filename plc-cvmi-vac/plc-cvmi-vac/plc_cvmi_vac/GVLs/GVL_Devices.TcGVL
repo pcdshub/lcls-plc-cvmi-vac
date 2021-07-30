@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.30">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_Devices" Id="{52afa4c3-7b19-4bdb-bea0-885a0e4080e4}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
 	(*Rack Mounted Turbo Pumps*)
-
 	{attribute 'TcLinkTo' := 	'.i_xR1				:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 1^Input;
 								 .i_xLSpd			:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 2^Input;
 								 .i_xSTART			:=	TIIB[CVMI_PLC_E12_EL1088]^Channel 3^Input;
@@ -19,7 +18,6 @@ VAR_GLOBAL
 		io: io
 	'}
 	CVMI_MAIN_PTM_01 : FB_PTM_Agilent_NoFeedback;
-	
 	
 (*Onboard Turbo Pumps*)
 	
@@ -150,6 +148,7 @@ VAR_GLOBAL
 		io: io
 	'}
 	CVMI_ROUGH_VRC_03 : FB_VRC;
+	
 (*Normally Open Valve with Readback, It is actually NC because of Hardware delay*)
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[CVMI_PNL1_EP11_EP2338-0002]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[CVMI_PNL1_EP11_EP2338-0002]^Channel 6^Input;
@@ -176,9 +175,7 @@ VAR_GLOBAL
 	st_Pfeiffer_RBK_CVMI_KTOF_PTM_02 			: ARRAY[1..20] OF ST_PfeifferStatus;
 	fb_PfeifferCom_CVMI_KTOF_PTM_02 			: FB_PFEIFFER_COM;
 	
-(*Varian/Agilent serial goes through Moxa serial ports*)
-	
-	
+(*Varian/Agilent serial goes through Moxa serial ports*)	
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
