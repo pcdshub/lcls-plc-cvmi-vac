@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.30">
   <POU Name="PRG_COM" Id="{cd596418-8e0a-453c-867e-618b97030684}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_COM
 VAR
