@@ -56,15 +56,15 @@ xOnBeamline := (xEcatBridge_COM_ERROR = FALSE) AND (sHUTCH_PLC_NAME = 'TMO');
 	
 (*TurboPump running Flag with 30 second Turn Off delay.*)
 b_TurboPumpRunningFlag := 
-	(CVMI_GJ_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING)  AND 
-	(CVMI_GJ_PTM_02.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
-	(CVMI_GJ_PTM_03.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
-	(CVMI_GJ_PTM_04.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
-	//(CVMI_MAIN_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND  There is currently no readback so Turbo pump state is not checked.
-	(CVMI_CATCH_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
-	(CVMI_KTOF_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND 
-	(CVMI_KTOF_PTM_02.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
-	(CVMI_ROUGH_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING);	
+	(CVMI_GJ_PTM_01.iq_stPtm.i_xAtSpd)  AND 
+	(CVMI_GJ_PTM_02.iq_stPtm.i_xAtSpd) AND
+	(CVMI_GJ_PTM_03.iq_stPtm.i_xAtSpd) AND
+	(CVMI_GJ_PTM_04.iq_stPtm.i_xAtSpd) AND
+	//(CVMI_MAIN_PTM_01.iq_stPtm.i_xAtSpd) AND  There is currently no readback so Turbo pump state is not checked.
+	(CVMI_CATCH_PTM_01.iq_stPtm.i_xAtSpd) AND
+	(CVMI_KTOF_PTM_01.iq_stPtm.i_xAtSpd) AND 
+	(CVMI_KTOF_PTM_02.iq_stPtm.i_xAtSpd) AND
+	(CVMI_ROUGH_PTM_01.iq_stPtm.i_xAtSpd);	
 TurboPumpTOF(IN:= b_TurboPumpRunningFlag, PT := TurboPumpDelayTime);
 xIP1_TURBOS_ALL_AtSpd:= TurboPumpTOF.Q;
 (*High Voltage Saftey Loop*)// rHighVoltageMinPressure = 1e-05; (*Hard coded High voltage Minimum Enable Pressure*)
@@ -321,37 +321,5 @@ xIP1_HV_SAFETY_ENABLE		:=	xHighVoltageSafteyLoopEnable;
 	
 	]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="3" Count="26" />
-      <LineId Id="281" Count="0" />
-      <LineId Id="283" Count="1" />
-      <LineId Id="289" Count="0" />
-      <LineId Id="286" Count="0" />
-      <LineId Id="290" Count="0" />
-      <LineId Id="285" Count="0" />
-      <LineId Id="282" Count="0" />
-      <LineId Id="30" Count="216" />
-      <LineId Id="320" Count="1" />
-      <LineId Id="328" Count="2" />
-      <LineId Id="327" Count="0" />
-      <LineId Id="324" Count="0" />
-      <LineId Id="331" Count="2" />
-      <LineId Id="325" Count="0" />
-      <LineId Id="322" Count="0" />
-      <LineId Id="249" Count="11" />
-      <LineId Id="334" Count="5" />
-      <LineId Id="261" Count="4" />
-      <LineId Id="340" Count="0" />
-      <LineId Id="291" Count="1" />
-      <LineId Id="294" Count="2" />
-      <LineId Id="303" Count="0" />
-      <LineId Id="307" Count="0" />
-      <LineId Id="311" Count="0" />
-      <LineId Id="315" Count="0" />
-      <LineId Id="293" Count="0" />
-      <LineId Id="357" Count="0" />
-      <LineId Id="266" Count="0" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
