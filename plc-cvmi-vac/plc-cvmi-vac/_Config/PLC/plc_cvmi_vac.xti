@@ -97,16 +97,9 @@
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
-					<Name>DIAGNOSTICS.i_sAMSNetID</Name>
+					<Name>LCLS_Vacuum.PMPS.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 					<Comment>
-						<![CDATA[Link the sAMSNetID to the Etherat Master netID]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-				</Var>
-				<Var>
-					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
-					<Comment>
-						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
+						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
 					</Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
@@ -116,6 +109,42 @@
 						<![CDATA[ETHERCAT BRIDGE COM STATUS
 0: Other side is in OP state, >0: Error]]>
 					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>DIAGNOSTICS.i_sAMSNetID</Name>
+					<Comment>
+						<![CDATA[Link the sAMSNetID to the Etherat Master netID]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
+					<Comment>
+						<![CDATA[0: External device connected, 1: External device not connected]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
+					<Comment>
+						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xEcatBridge_WcState</Name>
+					<Comment>
+						<![CDATA[0 = Data valid, 1 = Data invalid]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -136,28 +165,6 @@
 				<Var>
 					<Name>GVL_COM.stComIn_CVMI_KTOF_PTM_02</Name>
 					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
-					<Comment>
-						<![CDATA[0: External device connected, 1: External device not connected]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xEcatBridge_WcState</Name>
-					<Comment>
-						<![CDATA[0 = Data valid, 1 = Data invalid]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.CVMI_GJ_PTM_01.i_xSTART</Name>
@@ -600,6 +607,22 @@
 					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Devices.CVMI_GJ_PTM_01.q_RunDO</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -773,22 +796,6 @@
 						<![CDATA[I/O Outputs to TMO Beamline]]>
 					</Comment>
 					<Type>STRING(8)</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd</Name>
-					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC</Name>
