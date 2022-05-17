@@ -240,13 +240,13 @@ VAR_GLOBAL
 (*Normally Open Valve with Readback, It is actually NC because of Hardware delay*)
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[CVMI_PNL1_EP11_EP2338-0002]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[CVMI_PNL1_EP11_EP2338-0002]^Channel 6^Input;
-								 .q_xOPN_DO	:=	TIIB[CVMI_PNL1_EP11_EP2338-0002]^Channel 15^Output
+								 .q_xCLS_DO	:=	TIIB[CVMI_PNL1_EP11_EP2338-0002]^Channel 15^Output
 	'}
 	{attribute 'pytmc' := '
 		pv: CVMI:ROUGH:VRC:02
 		io: io
 	'}
-	CVMI_ROUGH_VRC_02 : FB_VRC;
+	CVMI_ROUGH_VRC_02 : FB_VRC_NO;
 	
 (*Pfeiffer*)
 	// They share the same serial port

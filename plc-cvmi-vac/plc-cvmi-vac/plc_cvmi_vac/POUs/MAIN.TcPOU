@@ -14,8 +14,7 @@ b_TurboPumpRunningFlag : BOOL;
 TurboPumpTOF : TOF;
 TurboPumpDelayTime : TIME := T#30s;
 
-
-
+fbGetCurTaskIndex : GETCURTASKINDEX;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -270,6 +269,7 @@ fb_PfeifferCom_CVMI_KTOF_PTM_02(astPfeifferControl := st_Pfeiffer_CTRL_CVMI_KTOF
 CVMI_KTOF_PTM_02.M_Serial_IO(st_Pfeiffer_RBK:= st_Pfeiffer_RBK_CVMI_KTOF_PTM_02[1], st_Pfeiffer_CTRL:= st_Pfeiffer_CTRL_CVMI_KTOF_PTM_02[1]);
 
 (*Vacuum Gate Valve*)
+fbGetCurTaskIndex();//getting index for first cycle of PLC operation
 	
 	IF(xOnBeamline) THEN //If OnBeamline then stay open.
 		CVMI_ROUGH_VRC_01.M_Set_OPN_SW(TRUE);
@@ -284,7 +284,8 @@ CVMI_KTOF_PTM_02.M_Serial_IO(st_Pfeiffer_RBK:= st_Pfeiffer_RBK_CVMI_KTOF_PTM_02[
 		iq_stValve=> );
 	END_IF
 	
-	
+(* // Delete this section when the valves are checked out to be working 
+
 	//CVMI:ROUGH:VRC:02 close when either pressure in the the GJ and CATCH chambers are above 10 torr.
 	IF((CVMI_GJ_GPI_01.PG.rPRESS >10.0) OR (CVMI_CATCH_GPI_01.PG.rPRESS > 10.0)) THEN	
 		//Set Valve to OPEN
@@ -294,6 +295,21 @@ CVMI_KTOF_PTM_02.M_Serial_IO(st_Pfeiffer_RBK:= st_Pfeiffer_RBK_CVMI_KTOF_PTM_02[
 	i_xExtILK_OK:= TRUE , 
 	i_xOverrideMode:= xSystemOverrideMode_CVMI, 
 	iq_stValve=> );
+
+*)
+
+//Normally Open Bypass Valve
+    IF(xOnBeamline) THEN
+        CVMI_ROUGH_VRC_02.M_Set_CLS_SW(FALSE);
+    ELSIF (NOT xOnBeamline AND _TaskInfo[fbGetCurTaskIndex.index].FirstCycle OR ((CVMI_GJ_GPI_01.PG.rPRESS > 10) OR (CVMI_CATCH_GPI_01.PG.rPRESS >10.0))) THEN
+        CVMI_ROUGH_VRC_02.M_Set_CLS_SW(TRUE); 
+	END_IF
+  
+    CVMI_ROUGH_VRC_02(
+    i_xExtILK_OK:= TRUE,
+    i_xOverrideMode:= xSystemOverrideMode_CVMI,
+    iq_stValve=> );
+
 		
 	IF(xOnBeamline) THEN //If OnBeamline then stay open.
 		CVMI_ROUGH_VRC_03.M_Set_OPN_SW(TRUE);
