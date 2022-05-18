@@ -303,6 +303,7 @@ fbGetCurTaskIndex();//getting index for first cycle of PLC operation
 *)
 
 //Normally Open Bypass Valve
+//CVMI:ROUGH:VRC:02 close when either pressure in the the GJ and CATCH chambers are above 10 torr.
     IF(xOnBeamline) THEN
         CVMI_ROUGH_VRC_02.M_Set_CLS_SW(FALSE);
     ELSIF (NOT xOnBeamline  OR ((CVMI_GJ_GPI_01.PG.rPRESS > 10) OR (CVMI_CATCH_GPI_01.PG.rPRESS >10.0))) THEN
