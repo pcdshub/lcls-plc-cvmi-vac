@@ -10,14 +10,14 @@ VAR_GLOBAL
 	SerialTXBuffer_CVMI_ROUGH_PTM_01 : ComBuffer;
 	SerialRXBuffer_CVMI_KTOF_PTM_01 : ComBuffer;
 	SerialTXBuffer_CVMI_KTOF_PTM_01 : ComBuffer;
-	SerialRXBuffer_CVMI_KTOF_PTM_02 : ComBuffer;
-	SerialTXBuffer_CVMI_KTOF_PTM_02 : ComBuffer;
+//	SerialRXBuffer_CVMI_KTOF_PTM_02 : ComBuffer;
+//	SerialTXBuffer_CVMI_KTOF_PTM_02 : ComBuffer;
 	
 	// Serial Terminal
 	fbSerialLineControl_CVMI_CATCH_PTM_01: SerialLineControl;
 	fbSerialLineControl_CVMI_ROUGH_PTM_01: SerialLineControl;
 	fbSerialLineControl_CVMI_KTOF_PTM_01: SerialLineControl;
-	fbSerialLineControl_CVMI_KTOF_PTM_02: SerialLineControl;
+//	fbSerialLineControl_CVMI_KTOF_PTM_02: SerialLineControl;
 	
 	//SERIAL IO
 	{attribute	'TcLinkTo'	:=	'.Status:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Status;
@@ -175,7 +175,8 @@ VAR_GLOBAL
 								 .D[21]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
 	'}
 	stComOut_CVMI_KTOF_PTM_01		AT %Q*	:	EL6outData22B;
-	
+
+(*	
 	{attribute	'TcLinkTo'	:=	'.Status:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Status;
 								 .D[0]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
 								 .D[1]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 1;
@@ -227,6 +228,7 @@ VAR_GLOBAL
 								 .D[21]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
 	'}
 	stComOut_CVMI_KTOF_PTM_02		AT %Q*	:	EL6outData22B;
+*)
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

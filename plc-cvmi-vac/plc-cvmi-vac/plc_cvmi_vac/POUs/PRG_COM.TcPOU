@@ -36,7 +36,8 @@ fbSerialLineControl_CVMI_KTOF_PTM_01(
 	RxBuffer:= SerialRXBuffer_CVMI_KTOF_PTM_01,
 	Error=> ,
 	ErrorID=> );
-	
+
+(*
 fbSerialLineControl_CVMI_KTOF_PTM_02(
 	Mode:= SERIALLINEMODE_EL6_22B,
 	pComIn:= ADR(stComIn_CVMI_KTOF_PTM_02),
@@ -46,11 +47,7 @@ fbSerialLineControl_CVMI_KTOF_PTM_02(
 	RxBuffer:= SerialRXBuffer_CVMI_KTOF_PTM_02,
 	Error=> ,
 	ErrorID=> );
-	]]></ST>
+*)	]]></ST>
     </Implementation>
-    <LineIds Name="PRG_COM">
-      <LineId Id="3" Count="39" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -112,12 +112,13 @@ VAR_GLOBAL
 								 .q_xReset 			:=	TIIB[CVMI_PNL1_EP02_EP2624-0002]^Channel 2^Output				 
 	'}
 	{attribute 'pytmc' := '
-		pv: CVMI:KTOF:PTM:02
+		pv: CVMI:KTOF:PTM:01
 		io: io
 	'}
-	CVMI_KTOF_PTM_02 : FB_PTM_Pfeiffer;
-	
+	CVMI_KTOF_PTM_01 : FB_PTM_Pfeiffer;
+
 (*KTOF Turbo Pump*)
+(* //Not Installed
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 1^Input;
 								 .i_xFaultNC		:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 2^Input;
 								 .i_xRemote			:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 3^Input;
@@ -129,6 +130,7 @@ VAR_GLOBAL
 		io: io
 	'}
 	CVMI_KTOF_PTM_01 : FB_PTM_Pfeiffer;
+*)
 	
 (*Pirani MKS 275 Gauges*)
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[CVMI_PNL1_EP07_EP3174-0002]^AI Standard Channel 1^Value
@@ -208,6 +210,9 @@ VAR_GLOBAL
 	'}
 	CVMI_MAIN_GHC_01 : FB_MKS909;
 	
+	(*
+	// Not installed currently
+		
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[CVMI_PNL1_EP09_EP3174-0002]^AI Standard Channel 4^Value;
 								 .q_xHV_DIS		:= 	TIIB[CVMI_PNL1_EP10_EP2624-0002]^Channel 4^Output
 	'}	
@@ -216,6 +221,8 @@ VAR_GLOBAL
 		io: io
 	'}
 	KTOF_GHC_01 : FB_MKS909;
+	
+	*)
 	
 	(*Normally Closed Valve with Readback*)
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[CVMI_PNL1_EP11_EP2338-0002]^Channel 1^Input;
@@ -261,10 +268,11 @@ VAR_GLOBAL
 	st_Pfeiffer_CTRL_CVMI_KTOF_PTM_01 		: ARRAY[1..20] OF ST_PfeifferControl;
 	st_Pfeiffer_RBK_CVMI_KTOF_PTM_01 			: ARRAY[1..20] OF ST_PfeifferStatus;
 	fb_PfeifferCom_CVMI_KTOF_PTM_01 			: FB_PFEIFFER_COM;
-	
+(*	
 	st_Pfeiffer_CTRL_CVMI_KTOF_PTM_02 		: ARRAY[1..20] OF ST_PfeifferControl;
 	st_Pfeiffer_RBK_CVMI_KTOF_PTM_02 			: ARRAY[1..20] OF ST_PfeifferStatus;
 	fb_PfeifferCom_CVMI_KTOF_PTM_02 			: FB_PFEIFFER_COM;
+*)
 	
 (*Varian/Agilent serial goes through Moxa serial ports*)
 	

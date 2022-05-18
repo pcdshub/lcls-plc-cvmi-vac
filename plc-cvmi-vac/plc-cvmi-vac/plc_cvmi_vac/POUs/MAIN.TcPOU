@@ -62,7 +62,7 @@ b_TurboPumpRunningFlag :=
 	//(CVMI_MAIN_PTM_01.iq_stPtm.i_xAtSpd) AND  There is currently no readback so Turbo pump state is not checked.
 	(CVMI_CATCH_PTM_01.iq_stPtm.i_xAtSpd) AND
 	(CVMI_KTOF_PTM_01.iq_stPtm.i_xAtSpd) AND 
-	(CVMI_KTOF_PTM_02.iq_stPtm.i_xAtSpd) AND
+//	(CVMI_KTOF_PTM_02.iq_stPtm.i_xAtSpd) AND  Currently not installed
 	(CVMI_ROUGH_PTM_01.iq_stPtm.i_xAtSpd);	
 TurboPumpTOF(IN:= b_TurboPumpRunningFlag, PT := TurboPumpDelayTime);
 xIP1_TURBOS_ALL_AtSpd:= TurboPumpTOF.Q;
@@ -201,7 +201,8 @@ xHighVoltageSafteyLoopEnable:= (CVMI_CATCH_GCC_01.IG.rPRESS <= rHighVoltageMinPr
 					iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH2_VRC_01_OPEN_LS,
 					x_onBeamline:= xOnBeamline), 
 	iq_stPtm=> );
-	
+
+(*
 	CVMI_KTOF_PTM_02(
 	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
 					i_stTurbo:= CVMI_KTOF_PTM_02.iq_stPtm, 
@@ -215,6 +216,7 @@ xHighVoltageSafteyLoopEnable:= (CVMI_CATCH_GCC_01.IG.rPRESS <= rHighVoltageMinPr
 					iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH2_VRC_01_OPEN_LS,
 					x_onBeamline:= xOnBeamline), 
 	iq_stPtm=> );
+*)
 	
 	CVMI_ROUGH_PTM_01(
 	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
@@ -260,6 +262,7 @@ fb_PfeifferCom_CVMI_KTOF_PTM_01(astPfeifferControl := st_Pfeiffer_CTRL_CVMI_KTOF
 							  SerialTXBuffer:= SerialTXBuffer_CVMI_KTOF_PTM_01);
 CVMI_KTOF_PTM_01.M_Serial_IO(st_Pfeiffer_RBK:= st_Pfeiffer_RBK_CVMI_KTOF_PTM_01[1], st_Pfeiffer_CTRL:= st_Pfeiffer_CTRL_CVMI_KTOF_PTM_01[1]);
 
+(*
 st_Pfeiffer_CTRL_CVMI_KTOF_PTM_02[1].iSerialAddress :=1;
 st_Pfeiffer_CTRL_CVMI_KTOF_PTM_02[1].xEnableComm := TRUE;
 fb_PfeifferCom_CVMI_KTOF_PTM_02(astPfeifferControl := st_Pfeiffer_CTRL_CVMI_KTOF_PTM_02,
@@ -267,6 +270,7 @@ fb_PfeifferCom_CVMI_KTOF_PTM_02(astPfeifferControl := st_Pfeiffer_CTRL_CVMI_KTOF
 							  SerialRXBuffer:= SerialRXBuffer_CVMI_KTOF_PTM_02,
 							  SerialTXBuffer:= SerialTXBuffer_CVMI_KTOF_PTM_02);
 CVMI_KTOF_PTM_02.M_Serial_IO(st_Pfeiffer_RBK:= st_Pfeiffer_RBK_CVMI_KTOF_PTM_02[1], st_Pfeiffer_CTRL:= st_Pfeiffer_CTRL_CVMI_KTOF_PTM_02[1]);
+*)
 
 (*Vacuum Gate Valve*)
 fbGetCurTaskIndex();//getting index for first cycle of PLC operation
@@ -301,10 +305,11 @@ fbGetCurTaskIndex();//getting index for first cycle of PLC operation
 //Normally Open Bypass Valve
     IF(xOnBeamline) THEN
         CVMI_ROUGH_VRC_02.M_Set_CLS_SW(FALSE);
-    ELSIF (NOT xOnBeamline AND _TaskInfo[fbGetCurTaskIndex.index].FirstCycle OR ((CVMI_GJ_GPI_01.PG.rPRESS > 10) OR (CVMI_CATCH_GPI_01.PG.rPRESS >10.0))) THEN
+    ELSIF (NOT xOnBeamline  OR ((CVMI_GJ_GPI_01.PG.rPRESS > 10) OR (CVMI_CATCH_GPI_01.PG.rPRESS >10.0))) THEN
         CVMI_ROUGH_VRC_02.M_Set_CLS_SW(TRUE); 
 	END_IF
-  
+ //_TaskInfo[fbGetCurTaskIndex.index].FirstCycle 
+   
     CVMI_ROUGH_VRC_02(
     i_xExtILK_OK:= TRUE,
     i_xOverrideMode:= xSystemOverrideMode_CVMI,
