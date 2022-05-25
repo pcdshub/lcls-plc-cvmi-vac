@@ -55,11 +55,15 @@
 		<Box File="KTOF_PNL1_EP03_EP6002-0002.xti" Id="63">
 			<EtherCAT PortABoxInfo="#x0100003e"/>
 		</Box>
-		<Box File="Term 45 (EP9128-1021).xti" Id="45">
-			<EtherCAT PortABoxInfo="#x02000020"/>
+		<Box BoxType="9099" Id="45">
+			<Name>Term 45 (EP9128-1021)</Name>
+			<ImageId>1000</ImageId>
+			<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23a84052" RevisionNo="#x001303fd" PortPhys="4883" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP9128-1021 8x EtherCAT junction - Dev A" Desc="EP9128-1021" PortABoxInfo="#x02000020"/>
 		</Box>
-		<Box File="Term 46 (EP9128-2021).xti" Id="46">
-			<EtherCAT PortABoxInfo="#x0200002d"/>
+		<Box BoxType="9099" Id="46">
+			<Name>Term 46 (EP9128-2021)</Name>
+			<ImageId>1000</ImageId>
+			<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23a84052" RevisionNo="#x001307e5" PortPhys="4371" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP9128-2021 8x EtherCAT junction - Dev B" Desc="EP9128-2021" PortABoxInfo="#x0200002d"/>
 		</Box>
 	</Box>
 </TcSmItem>
