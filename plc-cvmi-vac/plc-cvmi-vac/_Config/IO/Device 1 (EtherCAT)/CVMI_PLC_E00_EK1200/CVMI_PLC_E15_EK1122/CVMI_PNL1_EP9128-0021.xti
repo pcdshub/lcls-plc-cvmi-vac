@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CFlbTermDef" SubType="9099">
+	<ImageDatas>
+		<ImageData Id="1000">424d360300000000000036000000280000001000000010000000010018000000000000000000120b0000120b00000000000000000000ff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000808080808080000000000000808080808080000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000808080808080000000000000808080808080000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff00000000000000ff0000000000000000000000000000ff00000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff00000000000000ff0000000000000000000000000000ff00000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff00000000000000ff0000000000000000000000000000ff00000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff00000000000000ff0000000000000000000000000000ff00000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000ff00ffff00ffff00ff</ImageData>
+	</ImageDatas>
+	<Box Id="32" BoxType="9099">
+		<Name>__FILENAME__</Name>
+		<ImageId>1000</ImageId>
+		<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23a84052" RevisionNo="#x00130015" PortPhys="4881" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP9128-0021 8x EtherCAT junction" Desc="EP9128-0021"/>
+		<Box File="CVMI_PNL1_EP01_EP2338-0002.xti" Id="33">
+			<EtherCAT PortABoxInfo="#x03000020"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP02_EP2624-0002.xti" Id="34">
+			<EtherCAT PortABoxInfo="#x01000021"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP03_EP6002-0002.xti" Id="35">
+			<EtherCAT PortABoxInfo="#x01000022"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP04_EP2338-0002.xti" Id="36">
+			<EtherCAT PortABoxInfo="#x01000023"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP05_EP2624-0002.xti" Id="37">
+			<EtherCAT PortABoxInfo="#x01000024"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP06_EP6002-0002.xti" Id="38">
+			<EtherCAT PortABoxInfo="#x01000025"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP07_EP3174-0002.xti" Id="39">
+			<EtherCAT PortABoxInfo="#x01000026"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP08_EP3174-0002.xti" Id="40">
+			<EtherCAT PortABoxInfo="#x01000027"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP09_EP3174-0002.xti" Id="41">
+			<EtherCAT PortABoxInfo="#x01000028"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP10_EP2624-0002.xti" Id="42">
+			<EtherCAT PortABoxInfo="#x01000029"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP11_EP2338-0002.xti" Id="43">
+			<EtherCAT PortABoxInfo="#x0100002a"/>
+		</Box>
+		<Box File="CVMI_PNL1_EP12_EP2338-0002.xti" Id="44">
+			<EtherCAT PortABoxInfo="#x0100002b"/>
+		</Box>
+		<Box BoxType="9099" Id="45">
+			<Name>Term 45 (EP9128-1021)</Name>
+			<ImageId>1000</ImageId>
+			<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23a84052" RevisionNo="#x001303fd" PortPhys="4883" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP9128-1021 8x EtherCAT junction - Dev A" Desc="EP9128-1021" PortABoxInfo="#x02000020"/>
+			<Box File="CVMI_DCT_02_EP9224-0023.xti" Id="46">
+				<EtherCAT PortABoxInfo="#x0300002d"/>
+			</Box>
+		</Box>
+		<Box BoxType="9099" Id="48">
+			<Name>Term 48 (EP9128-2021)</Name>
+			<ImageId>1000</ImageId>
+			<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23a84052" RevisionNo="#x001307e5" PortPhys="4371" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP9128-2021 8x EtherCAT junction - Dev B" Desc="EP9128-2021" PortABoxInfo="#x0200002d"/>
+		</Box>
+	</Box>
+</TcSmItem>
