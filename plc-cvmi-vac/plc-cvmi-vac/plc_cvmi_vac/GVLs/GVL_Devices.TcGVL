@@ -141,6 +141,8 @@ VAR_GLOBAL
 	'}
 	CVMI_GJ_GPI_01 : FB_MKS275;
 	
+(* Not installed for LY-91
+	
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[CVMI_PNL1_EP07_EP3174-0002]^AI Standard Channel 2^Value
 	'}
 	{attribute 'pytmc' := '
@@ -148,7 +150,8 @@ VAR_GLOBAL
 		io: io
 	'}
 	CVMI_CATCH_GPI_01 : FB_MKS275;
-	
+*)	
+
 (*MicroPirani MKS 925 Gauges*)
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[CVMI_PNL1_EP08_EP3174-0002]^AI Standard Channel 1^Value
 	'}

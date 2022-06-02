@@ -480,13 +480,6 @@ SERIAL IO]]>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.CVMI_CATCH_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_Devices.CVMI_ROUGH_GPI_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
@@ -830,6 +823,13 @@ SERIAL IO]]>
 					</OwnerB>
 				</OwnerA>
 			</UnrestoredVarLinks>
+			<UnrestoredVarLinks ImportTime="2022-06-01T17:22:44">
+				<OwnerA Name="InputDst" Prefix="TIPC^plc_cvmi_vac^plc_cvmi_vac Instance" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP07_EP3174-0002">
+						<Link VarA="GVL_Devices.CVMI_CATCH_GPI_01.i_iPRESS_R" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 2^Value" AutoLink="true" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="20" OTCID="#x08502001"/>
 			</TaskPouOids>
@@ -1078,7 +1078,6 @@ SERIAL IO]]>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_CVMI_CATCH_PTM_01^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP07_EP3174-0002">
-				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_CATCH_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_GJ_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP08_EP3174-0002">

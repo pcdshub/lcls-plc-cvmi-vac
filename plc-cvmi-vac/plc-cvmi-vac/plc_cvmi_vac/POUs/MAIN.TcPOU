@@ -72,8 +72,8 @@ xHighVoltageSafteyLoopEnable:= (CVMI_CATCH_GCC_01.IG.rPRESS <= rHighVoltageMinPr
 (*PIRANI Gauges*)
 	CVMI_GJ_GPI_01.M_SetBits(32767);
 	CVMI_GJ_GPI_01(PG=>);
-	CVMI_CATCH_GPI_01.M_SetBits(32767);
-	CVMI_CATCH_GPI_01(PG=>);
+//	CVMI_CATCH_GPI_01.M_SetBits(32767);
+//	CVMI_CATCH_GPI_01(PG=>);
 
 (*uPIRANI Gauges*)
 	CVMI_ROUGH_GPI_01.M_SetBits(32767);
@@ -89,11 +89,11 @@ xHighVoltageSafteyLoopEnable:= (CVMI_CATCH_GCC_01.IG.rPRESS <= rHighVoltageMinPr
 	CVMI_GJ_GCC_01.M_SetBits(32767);
 	CVMI_GJ_GCC_01(PG:=CVMI_GJ_GPI_01.PG,IG=>,bEP:=TRUE);
 	CVMI_CATCH_GCC_01.M_SetBits(32767);
-	CVMI_CATCH_GCC_01(PG:=CVMI_CATCH_GPI_01.PG,IG=>,bEP:=TRUE);
+	CVMI_CATCH_GCC_01(PG:=CVMI_GJ_GPI_01.PG,IG=>,bEP:=TRUE);
 	
 (*Hot Cathode Gauges*)
 	CVMI_MAIN_GHC_01.M_SetBits(32767);
-	CVMI_MAIN_GHC_01(PG:=CVMI_CATCH_GPI_01.PG,IG=>);
+	CVMI_MAIN_GHC_01(PG:=CVMI_GJ_GPI_01.PG,IG=>);
 	
 (*TURBO Pumps
 *In general, if turbo pump setpoints are above the pirani guage readings or there is no downstream open path to a roughing pump, the turbo pump will close.
@@ -177,7 +177,7 @@ xHighVoltageSafteyLoopEnable:= (CVMI_CATCH_GCC_01.IG.rPRESS <= rHighVoltageMinPr
 	CVMI_CATCH_PTM_01(
 	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
 					i_stTurbo:= CVMI_CATCH_PTM_01.iq_stPtm, 
-					i_stISG:= CVMI_CATCH_GPI_01.PG, 
+					i_stISG:= CVMI_GJ_GPI_01.PG, 
 					i_stBSG:= CVMI_ROUGH_GPI_02.PG, 
 					iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
 					iq_stValve_NC:= CVMI_ROUGH_VRC_01.iq_stValve, 
@@ -191,7 +191,7 @@ xHighVoltageSafteyLoopEnable:= (CVMI_CATCH_GCC_01.IG.rPRESS <= rHighVoltageMinPr
 	CVMI_KTOF_PTM_01(
 	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
 					i_stTurbo:= CVMI_KTOF_PTM_01.iq_stPtm, 
-					i_stISG:= CVMI_CATCH_GPI_01.PG, 
+					i_stISG:= CVMI_GJ_GPI_01.PG, 
 					i_stBSG:= CVMI_ROUGH_GPI_02.PG, 
 					iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
 					iq_stValve_NC:= CVMI_ROUGH_VRC_01.iq_stValve, 
@@ -221,7 +221,7 @@ xHighVoltageSafteyLoopEnable:= (CVMI_CATCH_GCC_01.IG.rPRESS <= rHighVoltageMinPr
 	CVMI_ROUGH_PTM_01(
 	i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic_NC(
 					i_stTurbo:= CVMI_ROUGH_PTM_01.iq_stPtm, 
-					i_stISG:= CVMI_CATCH_GPI_01.PG, 
+					i_stISG:= CVMI_GJ_GPI_01.PG, 
 					i_stBSG:= CVMI_ROUGH_GPI_02.PG, 
 					iq_stValve_NO:= CVMI_ROUGH_VRC_02.iq_stValve, 
 					iq_stValve_NC:= CVMI_ROUGH_VRC_01.iq_stValve, 
@@ -306,7 +306,7 @@ fbGetCurTaskIndex();//getting index for first cycle of PLC operation
 //CVMI:ROUGH:VRC:02 close when either pressure in the the GJ and CATCH chambers are above 10 torr.
     IF(xOnBeamline) THEN
         CVMI_ROUGH_VRC_02.M_Set_CLS_SW(FALSE);
-    ELSIF (NOT xOnBeamline  OR ((CVMI_GJ_GPI_01.PG.rPRESS > 10) OR (CVMI_CATCH_GPI_01.PG.rPRESS >10.0))) THEN
+    ELSIF (NOT xOnBeamline  OR (CVMI_GJ_GPI_01.PG.rPRESS > 10.0)) THEN
         CVMI_ROUGH_VRC_02.M_Set_CLS_SW(TRUE); 
 	END_IF
  //_TaskInfo[fbGetCurTaskIndex.index].FirstCycle 
