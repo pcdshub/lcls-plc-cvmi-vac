@@ -104,6 +104,21 @@
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
+					<Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
+					<Comment>
+						<![CDATA[ETHERCAT BRIDGE COM STATUS
+0: Other side is in OP state, >0: Error]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
+					<Comment>
+						<![CDATA[0: External device connected, 1: External device not connected]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
 					<Comment>
 						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
@@ -111,11 +126,18 @@
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
-					<Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
+					<Name>GVL_PLC_Interfaces.xEcatBridge_WcState</Name>
 					<Comment>
-						<![CDATA[ETHERCAT BRIDGE COM STATUS
-0: Other side is in OP state, >0: Error]]>
+						<![CDATA[0 = Data valid, 1 = Data invalid]]>
 					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -188,28 +210,6 @@ SERIAL IO]]>
 ]]>
 					</Comment>
 					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
-					<Comment>
-						<![CDATA[0: External device connected, 1: External device not connected]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xEcatBridge_WcState</Name>
-					<Comment>
-						<![CDATA[0 = Data valid, 1 = Data invalid]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.CVMI_GJ_PTM_01.i_xSTART</Name>
@@ -600,6 +600,41 @@ SERIAL IO]]>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
 				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_MAIN_xPRESS_OK</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable</Name>
+					<Comment>
+						<![CDATA[When Enables the High voltage Saftey loop is closed and HV can start.]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_COM.stComOut_CVMI_CATCH_PTM_01</Name>
 					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
@@ -758,43 +793,8 @@ SERIAL IO]]>
 					<Type>STRING(8)</Type>
 				</Var>
 				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_MAIN_xPRESS_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
 					<Type>REAL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable</Name>
-					<Comment>
-						<![CDATA[When Enables the High voltage Saftey loop is closed and HV can start.]]>
-					</Comment>
-					<Type>BOOL</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
@@ -913,7 +913,7 @@ SERIAL IO]]>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_MAIN_PTM_01.i_iCurrentMon" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_MAIN_PTM_01.i_iRawSpeed" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP01_EP2338-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP01_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_KTOF_PTM_01.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_KTOF_PTM_01.i_xFaultNC" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_KTOF_PTM_01.i_xRemote" VarB="Channel 3^Input" AutoLink="true"/>
@@ -921,13 +921,13 @@ SERIAL IO]]>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_PTM_01.i_xFaultNC" VarB="Channel 6^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_PTM_01.i_xRemote" VarB="Channel 7^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP02_EP2624-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP02_EP2624-0002">
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_KTOF_PTM_01.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_KTOF_PTM_01.q_xReset" VarB="Channel 2^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_PTM_01.q_RunDO" VarB="Channel 3^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_PTM_01.q_xReset" VarB="Channel 4^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP03_EP6002-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP03_EP6002-0002">
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_CVMI_KTOF_PTM_01^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_CVMI_KTOF_PTM_01^D[10]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_CVMI_KTOF_PTM_01^D[11]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" AutoLink="true"/>
@@ -1021,15 +1021,15 @@ SERIAL IO]]>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_CVMI_ROUGH_PTM_01^D[8]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 8" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_CVMI_ROUGH_PTM_01^D[9]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 9" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP04_EP2338-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP04_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_CATCH_PTM_01.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_CATCH_PTM_01.i_xFaultNC" VarB="Channel 2^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP05_EP2624-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP05_EP2624-0002">
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_CATCH_PTM_01.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_CATCH_PTM_01.q_xReset" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP06_EP6002-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP06_EP6002-0002">
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_CVMI_CATCH_PTM_01^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_CVMI_CATCH_PTM_01^D[10]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_CVMI_CATCH_PTM_01^D[11]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" AutoLink="true"/>
@@ -1077,26 +1077,26 @@ SERIAL IO]]>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_CVMI_CATCH_PTM_01^D[8]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_CVMI_CATCH_PTM_01^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP07_EP3174-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP07_EP3174-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_GJ_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP08_EP3174-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP08_EP3174-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_GPI_02.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_GPI_03.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_GPI_04.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP09_EP3174-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP09_EP3174-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_CATCH_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_GJ_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_MAIN_GHC_01.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP10_EP2624-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP10_EP2624-0002">
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_CATCH_GCC_01.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_GJ_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_MAIN_GHC_01.q_xHV_DIS" VarB="Channel 3^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP11_EP2338-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP11_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_02.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
@@ -1104,7 +1104,7 @@ SERIAL IO]]>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_VRC_01.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_VRC_02.q_xCLS_DO" VarB="Channel 15^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP12_EP2338-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP12_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_03.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_03.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_VRC_03.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
