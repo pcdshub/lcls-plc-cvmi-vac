@@ -1106,8 +1106,8 @@ SERIAL IO]]>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP00_EP9128-0021^CVMI_PNL1_EP11_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_02.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_02.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_02.i_xClsLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.CVMI_ROUGH_VRC_02.i_xOpnLS" VarB="Channel 6^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_VRC_01.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.CVMI_ROUGH_VRC_02.q_xCLS_DO" VarB="Channel 15^Output" AutoLink="true"/>
 			</OwnerB>
