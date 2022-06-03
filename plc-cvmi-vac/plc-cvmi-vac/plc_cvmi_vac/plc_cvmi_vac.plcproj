@@ -20,6 +20,9 @@
     <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ComTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GVLs\GVL_COM.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
