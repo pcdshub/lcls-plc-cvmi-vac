@@ -55,10 +55,10 @@ xOnBeamline := (xEcatBridge_COM_ERROR = FALSE) AND (sHUTCH_PLC_NAME = 'TMO');
 	
 (*TurboPump running Flag with 30 second Turn Off delay.*)
 b_TurboPumpRunningFlag := 
-	(CVMI_GJ_PTM_01.iq_stPtm.i_xAtSpd)  AND 
-	(CVMI_GJ_PTM_02.iq_stPtm.i_xAtSpd) AND
-	(CVMI_GJ_PTM_03.iq_stPtm.i_xAtSpd) AND
-	(CVMI_GJ_PTM_04.iq_stPtm.i_xAtSpd) AND
+	(CVMI_GJ_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING)  AND 
+	(CVMI_GJ_PTM_02.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
+	(CVMI_GJ_PTM_03.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
+	(CVMI_GJ_PTM_04.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
 	//(CVMI_MAIN_PTM_01.iq_stPtm.i_xAtSpd) AND  There is currently no readback so Turbo pump state is not checked.
 	(CVMI_CATCH_PTM_01.iq_stPtm.i_xAtSpd) AND
 	(CVMI_KTOF_PTM_01.iq_stPtm.i_xAtSpd) AND 
