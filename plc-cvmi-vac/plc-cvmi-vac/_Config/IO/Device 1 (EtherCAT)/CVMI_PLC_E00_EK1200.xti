@@ -49,7 +49,7 @@
 		<Box File="CVMI_PLC_E14_EL3064.xti" Id="14">
 			<EtherCAT PortABoxInfo="#x0100000d"/>
 		</Box>
-		<Box File="CVMI_PLC_E15_EK1110.xti" Id="15">
+		<Box File="CVMI_PLC_E15_EK1122.xti" Id="31">
 			<EtherCAT PortABoxInfo="#x0100000e"/>
 		</Box>
 	</Box>
