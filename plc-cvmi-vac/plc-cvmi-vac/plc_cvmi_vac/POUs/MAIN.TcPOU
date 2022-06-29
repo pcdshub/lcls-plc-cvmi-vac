@@ -288,22 +288,24 @@ fbGetCurTaskIndex();//getting index for first cycle of PLC operation
 		iq_stValve=> );
 	END_IF
 	
-(* // Delete this section when the valves are checked out to be working 
-
 	//CVMI:ROUGH:VRC:02 close when either pressure in the the GJ and CATCH chambers are above 10 torr.
-	IF((CVMI_GJ_GPI_01.PG.rPRESS >10.0) OR (CVMI_CATCH_GPI_01.PG.rPRESS > 10.0)) THEN	
+	//-- delete when controls uncommented lines are proven to be correct
+(*
+	IF((CVMI_GJ_GPI_01.PG.rPRESS >10.0)) THEN	
 		//Set Valve to OPEN
-		CVMI_ROUGH_VRC_02.M_Set_OPN_SW(TRUE);
+		CVMI_ROUGH_VRC_02.M_Set_CLS_SW(False);
 	END_IF
+*)
 	CVMI_ROUGH_VRC_02(
-	i_xExtILK_OK:= TRUE , 
+	i_xExtILK_OK:= NOT((CVMI_GJ_GPI_01.PG.rPRESS >10.0)),
 	i_xOverrideMode:= xSystemOverrideMode_CVMI, 
 	iq_stValve=> );
 
-*)
 
-//Normally Open Bypass Valve
+
+//Normally Open Bypass Valve -- delete when controls uncommented lines are proven to be correct
 //CVMI:ROUGH:VRC:02 close when either pressure in the the GJ and CATCH chambers are above 10 torr.
+(*
     IF(xOnBeamline) THEN
         CVMI_ROUGH_VRC_02.M_Set_CLS_SW(FALSE);
     ELSIF (NOT xOnBeamline  OR (CVMI_GJ_GPI_01.PG.rPRESS > 10.0)) THEN
@@ -315,7 +317,7 @@ fbGetCurTaskIndex();//getting index for first cycle of PLC operation
     i_xExtILK_OK:= TRUE,
     i_xOverrideMode:= xSystemOverrideMode_CVMI,
     iq_stValve=> );
-
+*)
 		
 	IF(xOnBeamline) THEN //If OnBeamline then stay open.
 		CVMI_ROUGH_VRC_03.M_Set_OPN_SW(TRUE);
