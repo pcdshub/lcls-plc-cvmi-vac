@@ -27,7 +27,7 @@ fbSerialLineControl_CVMI_ROUGH_PTM_01(
 	Error=> ,
 	ErrorID=> );
 	
-fbSerialLineControl_CVMI_KTOF_PTM_01(
+(* fbSerialLineControl_CVMI_KTOF_PTM_01(
 	Mode:= SERIALLINEMODE_EL6_22B,
 	pComIn:= ADR(stComIn_CVMI_KTOF_PTM_01),
 	pComOut:=ADR(stComOut_CVMI_KTOF_PTM_01),
@@ -36,6 +36,7 @@ fbSerialLineControl_CVMI_KTOF_PTM_01(
 	RxBuffer:= SerialRXBuffer_CVMI_KTOF_PTM_01,
 	Error=> ,
 	ErrorID=> );
+*)
 
 (*
 fbSerialLineControl_CVMI_KTOF_PTM_02(
