@@ -297,7 +297,8 @@ fbGetCurTaskIndex();//getting index for first cycle of PLC operation
 	END_IF
 *)
 	CVMI_ROUGH_VRC_02(
-	i_xExtILK_OK:= NOT((CVMI_GJ_GPI_01.PG.rPRESS >10.0)),
+	i_xExtILK_OK:= NOT((CVMI_GJ_GPI_01.PG.rPRESS >10.0))
+	                AND (xTMO_ROUGH1_VRC_01_OPEN_LS AND xTMO_ROUGH2_VRC_01_OPEN_LS),
 	i_xOverrideMode:= xSystemOverrideMode_CVMI, 
 	iq_stValve=> );
 
