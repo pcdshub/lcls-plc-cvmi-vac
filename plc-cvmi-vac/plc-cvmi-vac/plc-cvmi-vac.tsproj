@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30">
-	<Project ProjectGUID="{32AECC15-E773-4287-A915-C9BE3FF2FAA0}" TargetNetId="172.21.132.91.1.1" ShowHideConfigurations="#x306">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30" TcVersionFixed="true">
+	<Project ProjectGUID="{AA4FE796-ADFE-45B6-B516-852647E55F60}" TargetNetId="172.21.132.91.1.1" ShowHideConfigurations="#x306">
 		<System>
-			<Licenses CacheOrCheckLicensesOnStartup="true">
+			<Licenses>
 				<Target>
-					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
-					<ManualSelect Instances="100">{103F30C9-DF25-439E-837B-9DF80CB9356C}</ManualSelect>
-					<ManualSelect>{E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}</ManualSelect>
-					<TargetSelect TargetId="2">{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</TargetSelect>
-					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
-					<TargetSelect TargetId="2">{66689887-CCBD-452C-AC9A-039D997C6E66}</TargetSelect>
-					<TargetSelect TargetId="2">{103F30C9-DF25-439E-837B-9DF80CB9356C}</TargetSelect>
-					<TargetSelect TargetId="2">{E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}</TargetSelect>
 					<LicenseDevice DongleHardwareId="2" DongleDevice="#x03020003" DongleSystemId="{12039C2A-8D06-2741-4DA4-8DFFFFBA201C}"/>
 				</Target>
 			</Licenses>
@@ -19,7 +11,7 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="351" AdtTasks="true">
+				<Task Id="4" Priority="30" CycleTime="200000" AmsPort="351" AdtTasks="true">
 					<Name>ComTask</Name>
 				</Task>
 			</Tasks>
@@ -32,6 +24,8 @@
 		</Io>
 	</Project>
 	<Mappings>
+		<MappingInfo Identifier="{08502002-0010-0304-0020-500810000403}" Id="#x02030030" Watchdog="00000000000000000000000000000000"/>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2002-0850-0120-500831000403}" Id="#x02030020"/>
 	</Mappings>
 </TcSmProject>

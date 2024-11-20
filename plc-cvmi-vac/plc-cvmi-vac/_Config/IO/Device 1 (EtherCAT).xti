@@ -36,10 +36,6 @@
 		<Box File="CVMI_PLC_E00_EK1200.xti" Id="1">
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
 		</Box>
-		<EtherCAT DcSyncMode="3" EnableVirtualSwitch="true" MaxSwitchPorts="4" MaxSwitchFrames="160">
-			<SyncUnit Name="EcatBridge" NoDeleteIfUnused="true"/>
-			<SyncUnit Name="KTOF" NoDeleteIfUnused="true"/>
-			<SyncUnit Name="EPbox" NoDeleteIfUnused="true"/>
-		</EtherCAT>
+		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120"/>
 	</Device>
 </TcSmItem>
