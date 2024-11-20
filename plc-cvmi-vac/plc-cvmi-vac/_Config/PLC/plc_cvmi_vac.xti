@@ -20,13 +20,12 @@
 			</Format>
 		</DataType>
 		<DataType>
-			<Name GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
+			<Name GUID="{EAB82801-71EA-4F02-B657-63E5422114E7}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
 			<Comment>
 				<![CDATA[ This data type is corresponding to the
-   KL-6xxx data structure used in the
+   EL-6xxx data structure used in the
    TwinCAT SystemManager
-   (KL-6xxx version using 5 data bytes / 
-    non-alternative (standard) output ) 
+   (EL-6xxx version using 22 data bytes) 
 ]]>
 			</Comment>
 			<BitSize>192</BitSize>
@@ -48,13 +47,12 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6outData22B</Name>
+			<Name GUID="{0C5F9265-0BF4-42AD-A6C0-C95E5F7EF9C9}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6outData22B</Name>
 			<Comment>
 				<![CDATA[ This data type is corresponding to the
-   KL-6xxx data structure used in the
+   EL-6xxx data structure used in the
    TwinCAT SystemManager
-   (KL-6xxx version using 5 data bytes / 
-    non-alternative (standard) output ) 
+   (EL-6xxx version using 22 data bytes) 
 ]]>
 			</Comment>
 			<BitSize>192</BitSize>
@@ -76,7 +74,7 @@
 			</SubItem>
 		</DataType>
 	</DataTypes>
-	<Project GUID="{AF068F7A-26FA-44CC-B5B4-E5618DDF7899}" Name="plc_cvmi_vac" PrjFilePath="..\..\plc_cvmi_vac\plc_cvmi_vac.plcproj" TmcFilePath="..\..\plc_cvmi_vac\plc_cvmi_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+	<Project GUID="{E8C5DB4F-3584-4DEB-8F7B-6704CDC22BBF}" Name="plc_cvmi_vac" PrjFilePath="..\..\plc_cvmi_vac\plc_cvmi_vac.plcproj" TmcFilePath="..\..\plc_cvmi_vac\plc_cvmi_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
 		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_cvmi_vac\plc_cvmi_vac.tmc">
 			<Name>plc_cvmi_vac Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
@@ -90,19 +88,19 @@
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
+					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
+					<Comment>
+						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
 					<Comment>
 						<![CDATA[ETHERCAT BRIDGE COM STATUS
 0: Other side is in OP state, >0: Error]]>
 					</Comment>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
-					<Comment>
-						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
@@ -120,6 +118,10 @@
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -507,10 +509,6 @@
 					</Comment>
 					<Type>STRING(8)</Type>
 				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
@@ -678,6 +676,10 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
+					<Type>REAL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -688,10 +690,6 @@
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
-					<Type>REAL</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="1">
 				<Name>ComTask Inputs</Name>
@@ -701,11 +699,11 @@
 						<![CDATA[	fbSerialLineControl_CVMI_KTOF_PTM_02: SerialLineControl;
 SERIAL IO]]>
 					</Comment>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{EAB82801-71EA-4F02-B657-63E5422114E7}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComIn_CVMI_ROUGH_PTM_01</Name>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{EAB82801-71EA-4F02-B657-63E5422114E7}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComIn_CVMI_KTOF_PTM_01</Name>
@@ -764,22 +762,22 @@ SERIAL IO]]>
 	stComOut_CVMI_KTOF_PTM_02		AT %Q*	:	EL6outData22B;
 ]]>
 					</Comment>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{EAB82801-71EA-4F02-B657-63E5422114E7}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>ComTask Outputs</Name>
 				<Var>
 					<Name>GVL_COM.stComOut_CVMI_CATCH_PTM_01</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{0C5F9265-0BF4-42AD-A6C0-C95E5F7EF9C9}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComOut_CVMI_ROUGH_PTM_01</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{0C5F9265-0BF4-42AD-A6C0-C95E5F7EF9C9}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComOut_CVMI_KTOF_PTM_01</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{0C5F9265-0BF4-42AD-A6C0-C95E5F7EF9C9}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
@@ -807,24 +805,15 @@ SERIAL IO]]>
 					<Type>UDINT</Type>
 					<InOut>7</InOut>
 				</Var>
+				<Var>
+					<Name>PMPS_GVL.BP_jsonDoc</Name>
+					<Type>SJsonValue</Type>
+					<InOut>7</InOut>
+				</Var>
 			</Vars>
-			<UnrestoredVarLinks ImportTime="2021-01-27T11:28:37">
-				<OwnerA Name="OutputSrc" Prefix="TIPC^plc_cvmi_vac^plc_cvmi_vac Instance" Type="2">
-					<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E04_EL6692">
-						<Link VarA="GVL_PLC_Interfaces.xIP1_TURBO_FAULT" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="IO Outputs^IP1_TURBOS_ALL_AtSpd" AutoLink="true" RestoreInfo="ANotFound"/>
-					</OwnerB>
-				</OwnerA>
-			</UnrestoredVarLinks>
-			<UnrestoredVarLinks ImportTime="2022-06-01T17:22:44">
-				<OwnerA Name="InputDst" Prefix="TIPC^plc_cvmi_vac^plc_cvmi_vac Instance" Type="1">
-					<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E15_EK1122^CVMI_PNL1_EP9128-0021^CVMI_PNL1_EP07_EP3174-0002">
-						<Link VarA="GVL_Devices.CVMI_CATCH_GPI_01.i_iPRESS_R" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 2^Value" AutoLink="true" RestoreInfo="ANotFound"/>
-					</OwnerB>
-				</OwnerA>
-			</UnrestoredVarLinks>
 			<TaskPouOids>
-				<TaskPouOid Prio="30" OTCID="#x08502001"/>
-				<TaskPouOid Prio="20" OTCID="#x08502002"/>
+				<TaskPouOid Prio="30" OTCID="#x08502002"/>
+				<TaskPouOid Prio="20" OTCID="#x08502001"/>
 			</TaskPouOids>
 		</Instance>
 	</Project>

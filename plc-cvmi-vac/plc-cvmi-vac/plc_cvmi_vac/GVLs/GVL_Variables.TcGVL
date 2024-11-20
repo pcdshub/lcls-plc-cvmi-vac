@@ -3,20 +3,20 @@
   <GVL Name="GVL_Variables" Id="{5467770e-821f-423d-bd4b-6868853d3f2a}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
-	{attribute 'pytmc' := '
-		pv: TMO:PLC:CVMI:VAC:OVRDON
-		io: io
-	'}
-	xSystemOverrideMode_CVMI	: BOOL := FALSE; (* Global system override for the HXR Vacuum System EBD*)
-	
-	{attribute 'pytmc' := '
-		pv: TMO:PLC:CVMI:ON:BEAMLINE
-		io:i
-	'}
-	xOnBeamline	:	BOOL := TRUE; (*Always assume On Beamline for safety checks*)
-	
-	rHighVoltageMinPressure	: REAL := 1e-05; (*Hard coded High voltage Minimum Enable Pressure*)
-	
+    {attribute 'pytmc' := '
+        pv: TMO:PLC:CVMI:VAC:OVRDON
+        io: io
+    '}
+    xSystemOverrideMode_CVMI	: BOOL := FALSE; (* Global system override for the HXR Vacuum System EBD*)
+
+    {attribute 'pytmc' := '
+        pv: TMO:PLC:CVMI:ON:BEAMLINE
+        io:i
+    '}
+    xOnBeamline	:	BOOL := TRUE; (*Always assume On Beamline for safety checks*)
+
+    rHighVoltageMinPressure	: REAL := 1e-05; (*Hard coded High voltage Minimum Enable Pressure*)
+
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

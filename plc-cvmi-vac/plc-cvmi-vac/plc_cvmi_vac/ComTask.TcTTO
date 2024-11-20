@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
-  <Task Name="ComTask" Id="{b759273c-aff9-49a2-ab64-8fc0ce8ac78a}">
+  <Task Name="ComTask" Id="{1731dc0a-fec7-41d0-b993-8be788f9c03f}">
     <!--CycleTime in micro seconds.-->
     <CycleTime>20000</CycleTime>
     <Priority>30</Priority>
     <PouCall>
       <Name>PRG_COM</Name>
     </PouCall>
-    <TaskFBGuid>{1fca5045-b1e0-4ac2-b42c-51f266a17a5f}</TaskFBGuid>
-    <Fb_init>{9c4a4a66-946a-4862-b8f6-a1faa8f3e90b}</Fb_init>
-    <Fb_exit>{ee335f38-cb5a-41d7-b5be-c040e5484216}</Fb_exit>
-    <CycleUpdate>{adb04efe-0304-4089-a0ae-796b8a5c1fc4}</CycleUpdate>
-    <PostCycleUpdate>{15ff9a3a-672d-4b37-a4ac-ce16251d855b}</PostCycleUpdate>
+    <TaskFBGuid>{402751e1-5bce-4768-b7c2-8bd6de755434}</TaskFBGuid>
+    <Fb_init>{372e7bfb-91f0-43b0-a6a7-795040ee530d}</Fb_init>
+    <Fb_exit>{ea4da448-4368-41ea-aa7a-2cb0899282b6}</Fb_exit>
+    <CycleUpdate>{4be5d429-05f7-4047-9a87-64441f043870}</CycleUpdate>
+    <PostCycleUpdate>{3c03bcea-2c03-4503-b591-8839e5e567f4}</PostCycleUpdate>
   </Task>
 </TcPlcObject>
