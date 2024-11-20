@@ -1,11 +1,11 @@
-#!c:/Repos/ads-ioc/R0.6.1///bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.7.0/bin/rhel7-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: plc-cvmi-vac.tsproj
 #        PLC name: plc_cvmi_vac (plc_cvmi_vac Instance)
-# Generated using: pytmc 2.15.2.dev0+g73bd2d9.d20230727
-# Project version: unknown
-#    Project hash: unknown
+# Generated using: pytmc 2.17.0
+# Project version: 8311e2a
+#    Project hash: 8311e2a469e0f322354ead9c35838a831d6669db
 #     PLC IP/host: 172.21.132.91
 #      PLC Net ID: 172.21.132.91.1.1
 #  ** Production mode IOC **
@@ -26,7 +26,7 @@
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "" )
+epicsEnvSet("ENGINEER", "janezg" )
 epicsEnvSet("LOCATION", "PLC:CVMI:VAC" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
@@ -49,7 +49,7 @@ epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
 epicsEnvSet("ADS_TIME_SOURCE",  "0")
 
 # Add a route to the PLC automatically:
-system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.132.91 ^172.*$")
+system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.132.91 ^172.*")
 
 # adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
 #    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
@@ -84,11 +84,11 @@ dbLoadRecords("save_restoreStatus.db", "P=PLC:CVMI:VAC:")
 dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 
 ## TwinCAT task, application, and project information databases ##
-dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CVMI:VAC,IDX=2")
-dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CVMI:VAC,IDX=1")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CVMI:VAC,IDX=2,TASK_PORT=351")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CVMI:VAC,IDX=1,TASK_PORT=350")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:CVMI:VAC")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CVMI:VAC,PROJECT=plc-cvmi-vac.tsproj,HASH=unknown,VERSION=unknown,PYTMC=2.15.2.dev0+g73bd2d9.d20230727,PLC_HOST=172.21.132.91")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CVMI:VAC,PROJECT=plc-cvmi-vac.tsproj,HASH=8311e2a,VERSION=8311e2a,PYTMC=2.17.0,PLC_HOST=172.21.132.91")
 
 #   LCLS General: * -> 2.11.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:CVMI:VAC,DEPENDENCY=LCLS_General,VERSION=2.11.0,VENDOR=SLAC")
