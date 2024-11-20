@@ -42,7 +42,7 @@ VAR_GLOBAL
 								 .D[18]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
 								 .D[19]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
 								 .D[20]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
-								 .D[21]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21;
+								 .D[21]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21
 	'}
 	stComIn_CVMI_CATCH_PTM_01		AT %I*	:	EL6inData22B;
 	
@@ -68,7 +68,7 @@ VAR_GLOBAL
 								 .D[18]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
 								 .D[19]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
 								 .D[20]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
-								 .D[21]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
+								 .D[21]:=TIIB[CVMI_PNL1_EP06_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21
 	'}
 	stComOut_CVMI_CATCH_PTM_01		AT %Q*	:	EL6outData22B;
 	
@@ -94,7 +94,7 @@ VAR_GLOBAL
 								 .D[18]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Data In 18;
 								 .D[19]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Data In 19;
 								 .D[20]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Data In 20;
-								 .D[21]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Data In 21;
+								 .D[21]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 2^Data In 21
 	'}
 	stComIn_CVMI_ROUGH_PTM_01		AT %I*	:	EL6inData22B;
 	
@@ -120,7 +120,7 @@ VAR_GLOBAL
 								 .D[18]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 2^Data Out 18;
 								 .D[19]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 2^Data Out 19;
 								 .D[20]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 2^Data Out 20;
-								 .D[21]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 2^Data Out 21;
+								 .D[21]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 2^Data Out 21
 	'}
 	stComOut_CVMI_ROUGH_PTM_01		AT %Q*	:	EL6outData22B;
 (*
@@ -146,7 +146,7 @@ VAR_GLOBAL
 								 .D[18]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
 								 .D[19]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
 								 .D[20]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
-								 .D[21]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21;
+								 .D[21]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21
 	'}
 	stComIn_CVMI_KTOF_PTM_02		AT %I*	:	EL6inData22B;
 	
@@ -172,7 +172,7 @@ VAR_GLOBAL
 								 .D[18]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
 								 .D[19]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
 								 .D[20]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
-								 .D[21]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
+								 .D[21]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21
 	'}
 	stComOut_CVMI_KTOF_PTM_02		AT %Q*	:	EL6outData22B;
 *)
@@ -199,7 +199,7 @@ VAR_GLOBAL
 								 .D[18]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
 								 .D[19]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
 								 .D[20]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
-								 .D[21]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21;
+								 .D[21]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21
 	'}
 	stComIn_CVMI_KTOF_PTM_01		AT %I*	:	EL6inData22B;
 	
@@ -225,7 +225,7 @@ VAR_GLOBAL
 								 .D[18]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
 								 .D[19]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
 								 .D[20]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
-								 .D[21]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
+								 .D[21]:=TIIB[CVMI_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21
 	'}
 	stComOut_CVMI_KTOF_PTM_01		AT %Q*	:	EL6outData22B;
 

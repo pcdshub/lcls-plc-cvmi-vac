@@ -2,6 +2,24 @@
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CNestedPlcProjDef">
 	<DataTypes>
 		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+			<Format>
+				<Printf>%d.%d.%d.%d.%d.%d</Printf>
+				<Parameter>[0]</Parameter>
+				<Parameter>[1]</Parameter>
+				<Parameter>[2]</Parameter>
+				<Parameter>[3]</Parameter>
+				<Parameter>[4]</Parameter>
+				<Parameter>[5]</Parameter>
+			</Format>
+		</DataType>
+		<DataType>
 			<Name GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
 			<Comment>
 				<![CDATA[ This data type is corresponding to the
@@ -57,145 +75,17 @@
 				<BitOffs>16</BitOffs>
 			</SubItem>
 		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
-			<BitSize>48</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>6</Elements>
-			</ArrayInfo>
-			<Format>
-				<Printf>%d.%d.%d.%d.%d.%d</Printf>
-				<Parameter>[0]</Parameter>
-				<Parameter>[1]</Parameter>
-				<Parameter>[2]</Parameter>
-				<Parameter>[3]</Parameter>
-				<Parameter>[4]</Parameter>
-				<Parameter>[5]</Parameter>
-			</Format>
-		</DataType>
 	</DataTypes>
 	<Project GUID="{AF068F7A-26FA-44CC-B5B4-E5618DDF7899}" Name="plc_cvmi_vac" PrjFilePath="..\..\plc_cvmi_vac\plc_cvmi_vac.plcproj" TmcFilePath="..\..\plc_cvmi_vac\plc_cvmi_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
 		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_cvmi_vac\plc_cvmi_vac.tmc">
 			<Name>plc_cvmi_vac Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
-				<Name>ComTask Inputs</Name>
-				<Var>
-					<Name>GVL_COM.stComIn_CVMI_CATCH_PTM_01</Name>
-					<Comment>
-						<![CDATA[	fbSerialLineControl_CVMI_KTOF_PTM_02: SerialLineControl;
-SERIAL IO]]>
-					</Comment>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComIn_CVMI_ROUGH_PTM_01</Name>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComIn_CVMI_KTOF_PTM_01</Name>
-					<Comment>
-						<![CDATA[
-	{attribute	'TcLinkTo'	:=	'.Status:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Status;
-								 .D[0]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
-								 .D[1]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 1;
-								 .D[2]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 2;
-								 .D[3]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 3;
-								 .D[4]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 4;
-								 .D[5]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 5;
-								 .D[6]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 6;
-								 .D[7]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 7;
-								 .D[8]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 8;
-								 .D[9]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 9;
-								 .D[10]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 10;
-								 .D[11]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 11;
-								 .D[12]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 12;
-								 .D[13]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 13;
-								 .D[14]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 14;
-								 .D[15]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 15;
-								 .D[16]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 16;
-								 .D[17]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 17;
-								 .D[18]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
-								 .D[19]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
-								 .D[20]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
-								 .D[21]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21;
-	'}
-	stComIn_CVMI_KTOF_PTM_02		AT %I*	:	EL6inData22B;
-	
-	{attribute	'TcLinkTo'	:=	'.Ctrl:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Ctrl;
-								 .D[0]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 0;
-								 .D[1]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 1;
-								 .D[2]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 2;
-								 .D[3]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 3;
-								 .D[4]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 4;
-								 .D[5]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 5;
-								 .D[6]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 6;
-								 .D[7]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 7;
-								 .D[8]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 8;
-								 .D[9]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 9;
-								 .D[10]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 10;
-								 .D[11]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 11;
-								 .D[12]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 12;
-								 .D[13]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 13;
-								 .D[14]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 14;
-								 .D[15]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 15;
-								 .D[16]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 16;
-								 .D[17]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 17;
-								 .D[18]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
-								 .D[19]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
-								 .D[20]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
-								 .D[21]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
-	'}
-	stComOut_CVMI_KTOF_PTM_02		AT %Q*	:	EL6outData22B;
-]]>
-					</Comment>
-					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-			</Vars>
-			<Vars VarGrpType="2">
-				<Name>ComTask Outputs</Name>
-				<Var>
-					<Name>GVL_COM.stComOut_CVMI_CATCH_PTM_01</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComOut_CVMI_ROUGH_PTM_01</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.stComOut_CVMI_KTOF_PTM_01</Name>
-					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
-				</Var>
-			</Vars>
-			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
-				<Var>
-					<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-				</Var>
-				<Var>
-					<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-				</Var>
 				<Var>
 					<Name>DIAGNOSTICS.i_sAMSNetID</Name>
 					<Comment>
 						<![CDATA[Link the sAMSNetID to the Etherat Master netID]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-				</Var>
-				<Var>
-					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
-					<Comment>
-						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
 					</Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
@@ -206,6 +96,13 @@ SERIAL IO]]>
 0: Other side is in OP state, >0: Error]]>
 					</Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
+					<Comment>
+						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
@@ -223,10 +120,6 @@ SERIAL IO]]>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -614,6 +507,10 @@ SERIAL IO]]>
 					</Comment>
 					<Type>STRING(8)</Type>
 				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
@@ -757,13 +654,6 @@ SERIAL IO]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
-					<Comment>
-						<![CDATA[I/O Outputs to TMO Beamline]]>
-					</Comment>
-					<Type>STRING(8)</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -788,10 +678,6 @@ SERIAL IO]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
-					<Type>REAL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -802,9 +688,109 @@ SERIAL IO]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
+					<Type>REAL</Type>
+				</Var>
+			</Vars>
+			<Vars VarGrpType="1">
+				<Name>ComTask Inputs</Name>
+				<Var>
+					<Name>GVL_COM.stComIn_CVMI_CATCH_PTM_01</Name>
+					<Comment>
+						<![CDATA[	fbSerialLineControl_CVMI_KTOF_PTM_02: SerialLineControl;
+SERIAL IO]]>
+					</Comment>
+					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComIn_CVMI_ROUGH_PTM_01</Name>
+					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComIn_CVMI_KTOF_PTM_01</Name>
+					<Comment>
+						<![CDATA[
+	{attribute	'TcLinkTo'	:=	'.Status:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Status;
+								 .D[0]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
+								 .D[1]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 1;
+								 .D[2]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 2;
+								 .D[3]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 3;
+								 .D[4]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 4;
+								 .D[5]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 5;
+								 .D[6]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 6;
+								 .D[7]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 7;
+								 .D[8]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 8;
+								 .D[9]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 9;
+								 .D[10]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 10;
+								 .D[11]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 11;
+								 .D[12]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 12;
+								 .D[13]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 13;
+								 .D[14]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 14;
+								 .D[15]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 15;
+								 .D[16]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 16;
+								 .D[17]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 17;
+								 .D[18]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
+								 .D[19]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
+								 .D[20]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
+								 .D[21]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21
+	'}
+	stComIn_CVMI_KTOF_PTM_02		AT %I*	:	EL6inData22B;
+	
+	{attribute	'TcLinkTo'	:=	'.Ctrl:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Ctrl;
+								 .D[0]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 0;
+								 .D[1]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 1;
+								 .D[2]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 2;
+								 .D[3]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 3;
+								 .D[4]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 4;
+								 .D[5]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 5;
+								 .D[6]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 6;
+								 .D[7]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 7;
+								 .D[8]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 8;
+								 .D[9]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 9;
+								 .D[10]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 10;
+								 .D[11]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 11;
+								 .D[12]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 12;
+								 .D[13]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 13;
+								 .D[14]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 14;
+								 .D[15]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 15;
+								 .D[16]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 16;
+								 .D[17]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 17;
+								 .D[18]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
+								 .D[19]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
+								 .D[20]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
+								 .D[21]:=TIIB[KTOF_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21
+	'}
+	stComOut_CVMI_KTOF_PTM_02		AT %Q*	:	EL6outData22B;
+]]>
+					</Comment>
+					<Type GUID="{06693002-A9BA-476B-A071-90851D05ECF4}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+			</Vars>
+			<Vars VarGrpType="2">
+				<Name>ComTask Outputs</Name>
+				<Var>
+					<Name>GVL_COM.stComOut_CVMI_CATCH_PTM_01</Name>
+					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComOut_CVMI_ROUGH_PTM_01</Name>
+					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.stComOut_CVMI_KTOF_PTM_01</Name>
+					<Type GUID="{0EAC2C8B-3401-433F-9309-C59D020A1A05}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
+					<Comment>
+						<![CDATA[I/O Outputs to TMO Beamline]]>
+					</Comment>
+					<Type>STRING(8)</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
-				<Name>PlcTask Retains</Name>
+				<Name>ComTask Retains</Name>
 				<Var>
 					<Name>PMPS_GVL.SuccessfulPreemption</Name>
 					<Comment>
@@ -837,7 +823,7 @@ SERIAL IO]]>
 				</OwnerA>
 			</UnrestoredVarLinks>
 			<TaskPouOids>
-				<TaskPouOid Prio="1" OTCID="#x08502001"/>
+				<TaskPouOid Prio="30" OTCID="#x08502001"/>
 				<TaskPouOid Prio="20" OTCID="#x08502002"/>
 			</TaskPouOids>
 		</Instance>
@@ -845,6 +831,7 @@ SERIAL IO]]>
 	<Mappings>
 		<OwnerA Name="plc_cvmi_vac Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^CVMI_PLC_E00_EK1200^CVMI_PLC_E04_EL6692">
+				<Link VarA="ComTask Outputs^GVL_PLC_Interfaces.sENDSTATION_PLC_NAME" VarB="IO Outputs^ENDSTATION_PLC_NAME" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.sHUTCH_PLC_NAME" VarB="IO Inputs^HUTCH_PLC_NAME" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected" VarB="SYNC Inputs^External device not connected" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_TxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true"/>
@@ -852,7 +839,6 @@ SERIAL IO]]>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS" VarB="IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS" VarB="IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.rIP1_MAIN_rPRESS" VarB="IO Outputs^IP1_MAIN_rPRESS" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.sENDSTATION_PLC_NAME" VarB="IO Outputs^ENDSTATION_PLC_NAME" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE" VarB="IO Outputs^IP1_HV_SAFETY_ENABLE" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC" VarB="IO Outputs^IP1_MAIN_xAT_VAC" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_MAIN_xPRESS_OK" VarB="IO Outputs^IP1_MAIN_xPRESS_OK" AutoLink="true"/>
