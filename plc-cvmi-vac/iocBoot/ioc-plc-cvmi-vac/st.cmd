@@ -4,8 +4,8 @@
 #         Project: plc-cvmi-vac.tsproj
 #        PLC name: plc_cvmi_vac (plc_cvmi_vac Instance)
 # Generated using: pytmc 2.17.0
-# Project version: 8311e2a
-#    Project hash: 8311e2a469e0f322354ead9c35838a831d6669db
+# Project version: V1.0.0-51-g7938a1c
+#    Project hash: 7938a1c71d5ce4dd78d1c5a703afcb4ec61c6055
 #     PLC IP/host: 172.21.132.91
 #      PLC Net ID: 172.21.132.91.1.1
 #  ** Production mode IOC **
@@ -26,7 +26,7 @@
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "janezg" )
+epicsEnvSet("ENGINEER", "tongju" )
 epicsEnvSet("LOCATION", "PLC:CVMI:VAC" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
@@ -88,7 +88,7 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CVMI:VAC,IDX=
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CVMI:VAC,IDX=1,TASK_PORT=350")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:CVMI:VAC")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CVMI:VAC,PROJECT=plc-cvmi-vac.tsproj,HASH=8311e2a,VERSION=8311e2a,PYTMC=2.17.0,PLC_HOST=172.21.132.91")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CVMI:VAC,PROJECT=plc-cvmi-vac.tsproj,HASH=7938a1c,VERSION=V1.0.0-51-g7938a1c,PYTMC=2.17.0,PLC_HOST=172.21.132.91")
 
 #   LCLS General: * -> 2.11.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:CVMI:VAC,DEPENDENCY=LCLS_General,VERSION=2.11.0,VENDOR=SLAC")
