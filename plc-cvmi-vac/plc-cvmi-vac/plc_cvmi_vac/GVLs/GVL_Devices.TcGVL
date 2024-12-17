@@ -139,7 +139,7 @@ VAR_GLOBAL
         pv: CVMI:GJ:GPI:01
         io: io
     '}
-    CVMI_GJ_GPI_01 : FB_MKS275;
+    CVMI_GJ_GPI_01 : FB_972;
 
 (* Not installed for LY-91
 
