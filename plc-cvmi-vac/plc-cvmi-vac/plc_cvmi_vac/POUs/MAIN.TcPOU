@@ -283,7 +283,7 @@ fbGetCurTaskIndex();//getting index for first cycle of PLC operation
         iq_stValve=> );
     ELSE
         CVMI_ROUGH_VRC_01(//CVMI:ROUGH:VRC:01 can open when the pressure across the valve is below 10 torr //add the beamline
-        i_xExtILK_OK:= (ABS(CVMI_ROUGH_GPI_01.PG.rPRESS - CVMI_ROUGH_GPI_02.PG.rPRESS)<10.0),
+        i_xExtILK_OK:= (ABS(CVMI_ROUGH_GPI_01.PG.rPRESS - CVMI_ROUGH_GPI_02.PG.rPRESS)<3000.0),
         i_xOverrideMode:= xSystemOverrideMode_CVMI,
         iq_stValve=> );
     END_IF
@@ -328,7 +328,7 @@ fbGetCurTaskIndex();//getting index for first cycle of PLC operation
         iq_stValve=> );
     ELSE
         CVMI_ROUGH_VRC_03(//CVMI:ROUGH:VRC:03 can open when the pressure across the valve is below 10 torr //add the beamline
-        i_xExtILK_OK:= (ABS(CVMI_ROUGH_GPI_03.PG.rPRESS - CVMI_ROUGH_GPI_04.PG.rPRESS)<10.0),
+        i_xExtILK_OK:= (ABS(CVMI_ROUGH_GPI_03.PG.rPRESS - CVMI_ROUGH_GPI_04.PG.rPRESS)<3000.0),
         i_xOverrideMode:= xSystemOverrideMode_CVMI,
         iq_stValve=> );
     END_IF
