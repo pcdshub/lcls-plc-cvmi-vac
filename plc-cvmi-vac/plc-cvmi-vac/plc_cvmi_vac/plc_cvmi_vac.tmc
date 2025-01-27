@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{2EC00CC4-2C35-CC6A-3B39-1330D2D2B671}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{B2A63DF9-3686-3292-EB2A-1BB974F24D40}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_System">T_MaxString</Name>
@@ -134,31 +134,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80772124</GetCodeOffs>
+        <GetCodeOffs>80772240</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80772160</GetCodeOffs>
+        <GetCodeOffs>80772276</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80772168</GetCodeOffs>
+        <GetCodeOffs>80772284</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80772148</GetCodeOffs>
+        <GetCodeOffs>80772264</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80772164</GetCodeOffs>
+        <GetCodeOffs>80772280</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="0">__getbBusy</Name>
@@ -1397,15 +1397,15 @@
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80772064</GetCodeOffs>
-        <SetCodeOffs>80772088</SetCodeOffs>
+        <GetCodeOffs>80772180</GetCodeOffs>
+        <SetCodeOffs>80772204</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80772104</GetCodeOffs>
-        <SetCodeOffs>80772116</SetCodeOffs>
+        <GetCodeOffs>80772220</GetCodeOffs>
+        <SetCodeOffs>80772232</SetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>ExtendName</Name>
@@ -1651,37 +1651,37 @@
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>80772216</GetCodeOffs>
+        <GetCodeOffs>80772332</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80772196</GetCodeOffs>
+        <GetCodeOffs>80772312</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80772284</GetCodeOffs>
+        <GetCodeOffs>80772400</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nUniqueId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80772288</GetCodeOffs>
+        <GetCodeOffs>80772404</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80772244</GetCodeOffs>
+        <GetCodeOffs>80772360</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80772292</GetCodeOffs>
+        <GetCodeOffs>80772408</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>EqualsToEventClass</Name>
@@ -2280,7 +2280,7 @@
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>80772316</GetCodeOffs>
+        <GetCodeOffs>80772432</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>SetJsonAttribute</Name>
@@ -3129,7 +3129,7 @@
         <Name>nTimestamp</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>80777572</GetCodeOffs>
+        <GetCodeOffs>80777728</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="45">__getnTimestamp</Name>
@@ -4846,31 +4846,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80777056</GetCodeOffs>
+        <GetCodeOffs>80777212</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80777100</GetCodeOffs>
+        <GetCodeOffs>80777256</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80777064</GetCodeOffs>
+        <GetCodeOffs>80777220</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80777088</GetCodeOffs>
+        <GetCodeOffs>80777244</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80777108</GetCodeOffs>
+        <GetCodeOffs>80777264</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="0">__getbBusy</Name>
@@ -13957,8 +13957,11 @@ More?
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="LCLS_Vacuum">FB_972</Name>
-      <BitSize>86464</BitSize>
+      <Name Namespace="LCLS_Vacuum">FB_CVM201</Name>
+      <Comment> This function block is used to provide protection and automatic turn on of ion gauges,
+ it also manages the turn on of the AT_VAC boolean, and checks to make sure the pressure is good 
+ For CVM 201  convectron SuperBee</Comment>
+      <BitSize>86720</BitSize>
       <ExtendsType Namespace="LCLS_Vacuum">FB_GaugeBase</ExtendsType>
       <SubItem>
         <Name>PG</Name>
@@ -13979,7 +13982,7 @@ More?
         </Properties>
       </SubItem>
       <SubItem>
-        <Name>rV</Name>
+        <Name>V</Name>
         <Type>REAL</Type>
         <BitSize>32</BitSize>
         <BitOffs>86368</BitOffs>
@@ -13995,11 +13998,20 @@ More?
         </Default>
       </SubItem>
       <SubItem>
+        <Name>Vlowest</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>86432</BitOffs>
+        <Default>
+          <Value>10</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
         <Name>i_iPRESS_R</Name>
         <Type>INT</Type>
         <Comment> input Pressure // Link to analog Input</Comment>
         <BitSize>16</BitSize>
-        <BitOffs>86416</BitOffs>
+        <BitOffs>86464</BitOffs>
         <Properties>
           <Property>
             <Name>TcAddressType</Name>
@@ -14007,11 +14019,71 @@ More?
           </Property>
         </Properties>
       </SubItem>
+      <SubItem>
+        <Name>MinPressure</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>86496</BitOffs>
+        <Default>
+          <Value>0.0001</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rDeadband</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>86528</BitOffs>
+        <Default>
+          <Value>0.05</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rValidLoBoundary</Name>
+        <Type>REAL</Type>
+        <Comment>  0.375V as per manual page 27</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>86560</BitOffs>
+        <Default>
+          <Value>0.375</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rValidHiBoundary</Name>
+        <Type>REAL</Type>
+        <Comment> 5.534; // manual page 27</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>86592</BitOffs>
+        <Default>
+          <Value>5.659</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rDisconnectedBoundary</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>86624</BitOffs>
+        <Default>
+          <Value>0.3</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rDefaultVAC_SP</Name>
+        <Type>REAL</Type>
+        <Comment>Default set point 50 mT</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>86656</BitOffs>
+        <Default>
+          <Value>0.05</Value>
+        </Default>
+      </SubItem>
       <Action>
         <Name>ACT_Logger</Name>
       </Action>
       <Action>
-        <Name>ACT_IO</Name>
+        <Name>ACT_Persistent</Name>
+      </Action>
+      <Action>
+        <Name>IO</Name>
       </Action>
       <Method>
         <Name>M_SetBits</Name>
@@ -18090,44 +18162,6 @@ In case VRC is normally open</Comment>
       </Properties>
     </DataType>
     <DataType>
-      <Name GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Name>
-      <DisplayName TxtId="">Log event</DisplayName>
-      <EventId>
-        <Name Id="0">Critical</Name>
-        <DisplayName TxtId="">Critical</DisplayName>
-        <Severity>Critical</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1">Error</Name>
-        <DisplayName TxtId="">Error</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="2">Warning</Name>
-        <DisplayName TxtId="">Warning</DisplayName>
-        <Severity>Warning</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="3">Info</Name>
-        <DisplayName TxtId="">Info</DisplayName>
-        <Severity>Info</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4">Verbose</Name>
-        <DisplayName TxtId="">Verbose</DisplayName>
-        <Severity>Verbose</Severity>
-      </EventId>
-      <Hides>
-        <Hide GUID="{E50B8F82-4C54-4F5A-855E-90970D01354A}"/>
-        <Hide GUID="{772B0B6F-412E-46FD-9006-6E00BFFE1C3D}"/>
-        <Hide GUID="{8FAD87A4-C885-4A4F-85AF-8AB324945AE2}"/>
-        <Hide GUID="{16BEE339-E307-4BC2-8E77-D5FB1794DF5A}"/>
-        <Hide GUID="{B7E60A74-CB5C-4A02-B59C-74B86A888DE9}"/>
-        <Hide GUID="{6B58EF80-AB34-4F6C-81D0-B0589F4FC534}"/>
-        <Hide GUID="{9E76D1D7-D744-4E3D-B111-F6F94B60E6AB}"/>
-      </Hides>
-    </DataType>
-    <DataType>
       <Name GUID="{11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31}" TcBaseType="true" CName="TcSystemEventClass">TcSystemEventClass</Name>
       <DisplayName TxtId="">TcSystemEventClass</DisplayName>
       <EventId>
@@ -18931,6 +18965,44 @@ In case VRC is normally open</Comment>
       </EventId>
       <Hides>
         <Hide GUID="{3FEAA938-D042-4B1E-8ADD-BB2F7BE872B0}"/>
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Name>
+      <DisplayName TxtId="">Log event</DisplayName>
+      <EventId>
+        <Name Id="0">Critical</Name>
+        <DisplayName TxtId="">Critical</DisplayName>
+        <Severity>Critical</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1">Error</Name>
+        <DisplayName TxtId="">Error</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="2">Warning</Name>
+        <DisplayName TxtId="">Warning</DisplayName>
+        <Severity>Warning</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="3">Info</Name>
+        <DisplayName TxtId="">Info</DisplayName>
+        <Severity>Info</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4">Verbose</Name>
+        <DisplayName TxtId="">Verbose</DisplayName>
+        <Severity>Verbose</Severity>
+      </EventId>
+      <Hides>
+        <Hide GUID="{E50B8F82-4C54-4F5A-855E-90970D01354A}"/>
+        <Hide GUID="{772B0B6F-412E-46FD-9006-6E00BFFE1C3D}"/>
+        <Hide GUID="{8FAD87A4-C885-4A4F-85AF-8AB324945AE2}"/>
+        <Hide GUID="{16BEE339-E307-4BC2-8E77-D5FB1794DF5A}"/>
+        <Hide GUID="{B7E60A74-CB5C-4A02-B59C-74B86A888DE9}"/>
+        <Hide GUID="{6B58EF80-AB34-4F6C-81D0-B0589F4FC534}"/>
+        <Hide GUID="{9E76D1D7-D744-4E3D-B111-F6F94B60E6AB}"/>
       </Hides>
     </DataType>
     <DataType>
@@ -32184,7 +32256,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>640649352</BitOffs>
+            <BitOffs>640649672</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
@@ -32201,7 +32273,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>640650752</BitOffs>
+            <BitOffs>640651072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
@@ -32223,7 +32295,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641338312</BitOffs>
+            <BitOffs>641338632</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
@@ -32244,7 +32316,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903488</BitOffs>
+            <BitOffs>641896800</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xEcatBridge_WcState</Name>
@@ -32265,7 +32337,973 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903496</BitOffs>
+            <BitOffs>641896808</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIIB[CVMI_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>641896816</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIIB[CVMI_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>641896824</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xSTART</Name>
+            <Comment>I/Os</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983520</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xR1</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983528</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xR2</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983536</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983544</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_iTempMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983552</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_iPowerMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983568</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_iCurrentMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983584</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_iRawSpeed</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983600</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xFault</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983616</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xSTART</Name>
+            <Comment>I/Os</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070432</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xR1</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070440</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xR2</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070448</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070456</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_iTempMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070464</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_iPowerMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070480</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_iCurrentMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070496</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_iRawSpeed</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070512</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xFault</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070528</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xSTART</Name>
+            <Comment>I/Os</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157344</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xR1</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157352</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xR2</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157360</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157368</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_iTempMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157376</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_iPowerMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157392</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_iCurrentMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157408</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_iRawSpeed</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157424</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xFault</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157440</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xSTART</Name>
+            <Comment>I/Os</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244256</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xR1</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244264</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xR2</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244272</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244280</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_iTempMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244288</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_iPowerMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244304</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_iCurrentMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244320</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_iRawSpeed</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244336</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xFault</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244352</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xSTART</Name>
+            <Comment>I/Os</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331168</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xR1</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331176</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xR2</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331184</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331192</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_iTempMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331200</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_iPowerMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331216</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_iCurrentMon</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331232</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_iRawSpeed</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331248</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xFault</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331264</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_PTM_01.i_xAtSpd</Name>
+            <Comment> Normaml operation when true</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642414976</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_PTM_01.i_xFaultNC</Name>
+            <Comment> Error</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642414984</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_PTM_01.i_xWarn</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642414992</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_PTM_01.i_xRemote</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642415000</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.i_xAtSpd</Name>
+            <Comment> Normaml operation when true</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642498624</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.i_xFaultNC</Name>
+            <Comment> Error</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642498632</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.i_xWarn</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642498640</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.i_xRemote</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642498648</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_KTOF_PTM_01.i_xAtSpd</Name>
+            <Comment> Normaml operation when true</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642582272</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_KTOF_PTM_01.i_xFaultNC</Name>
+            <Comment> Error</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642582280</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_KTOF_PTM_01.i_xWarn</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642582288</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_KTOF_PTM_01.i_xRemote</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642582296</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_GPI_01.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642668800</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_GPI_01.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642756080</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_GPI_02.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642843184</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_GPI_03.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642930288</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_GPI_04.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643017392</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_GCC_01.i_iPRESS_R</Name>
+            <Comment> Controls and I/Os</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643105456</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_GCC_01.i_xHV_ON</Name>
+            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643105480</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_GCC_01.i_xDisc_Active</Name>
+            <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643105488</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_GCC_01.i_iPRESS_R</Name>
+            <Comment> Controls and I/Os</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643193840</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_GCC_01.i_xHV_ON</Name>
+            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643193864</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_GCC_01.i_xDisc_Active</Name>
+            <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643193872</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_GHC_01.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643282032</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_VRC_01.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643367008</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_VRC_01.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643367016</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_VRC_03.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643451936</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_VRC_03.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643451944</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_VRC_02.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643536864</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_VRC_02.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643536872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.sHUTCH_PLC_NAME</Name>
@@ -32286,973 +33324,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903504</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[CVMI_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>641903576</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[CVMI_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>641903584</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xSTART</Name>
-            <Comment>I/Os</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990496</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xR1</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990504</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xR2</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990512</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990520</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_iTempMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990528</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_iPowerMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990544</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_iCurrentMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990560</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_iRawSpeed</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990576</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.i_xFault</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990592</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xSTART</Name>
-            <Comment>I/Os</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077408</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xR1</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077416</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xR2</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077424</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077432</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_iTempMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077440</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_iPowerMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077456</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_iCurrentMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077472</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_iRawSpeed</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077488</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.i_xFault</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077504</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xSTART</Name>
-            <Comment>I/Os</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164320</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xR1</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164328</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xR2</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164336</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164344</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_iTempMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164352</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_iPowerMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164368</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_iCurrentMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164384</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_iRawSpeed</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164400</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.i_xFault</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164416</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xSTART</Name>
-            <Comment>I/Os</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251232</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xR1</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251240</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xR2</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251248</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251256</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_iTempMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251264</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_iPowerMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251280</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_iCurrentMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251296</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_iRawSpeed</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251312</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.i_xFault</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251328</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xSTART</Name>
-            <Comment>I/Os</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338144</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xR1</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338152</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xR2</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338160</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338168</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_iTempMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338176</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_iPowerMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338192</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_iCurrentMon</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338208</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_iRawSpeed</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338224</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.i_xFault</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338240</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_PTM_01.i_xAtSpd</Name>
-            <Comment> Normaml operation when true</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642421952</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_PTM_01.i_xFaultNC</Name>
-            <Comment> Error</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642421960</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_PTM_01.i_xWarn</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642421968</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_PTM_01.i_xRemote</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642421976</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.i_xAtSpd</Name>
-            <Comment> Normaml operation when true</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642505600</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.i_xFaultNC</Name>
-            <Comment> Error</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642505608</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.i_xWarn</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642505616</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.i_xRemote</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642505624</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_KTOF_PTM_01.i_xAtSpd</Name>
-            <Comment> Normaml operation when true</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642589248</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_KTOF_PTM_01.i_xFaultNC</Name>
-            <Comment> Error</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642589256</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_KTOF_PTM_01.i_xWarn</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642589264</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_KTOF_PTM_01.i_xRemote</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642589272</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_GPI_01.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642675728</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_GPI_01.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642762800</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_GPI_02.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642849904</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_GPI_03.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642937008</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_GPI_04.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643024112</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_GCC_01.i_iPRESS_R</Name>
-            <Comment> Controls and I/Os</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643112176</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_GCC_01.i_xHV_ON</Name>
-            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643112200</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_GCC_01.i_xDisc_Active</Name>
-            <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643112208</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_GCC_01.i_iPRESS_R</Name>
-            <Comment> Controls and I/Os</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643200560</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_GCC_01.i_xHV_ON</Name>
-            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643200584</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_GCC_01.i_xDisc_Active</Name>
-            <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643200592</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_GHC_01.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643288752</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_VRC_01.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643373728</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_VRC_01.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643373736</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_VRC_03.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643458656</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_VRC_03.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643458664</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_VRC_02.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643543584</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_VRC_02.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643543592</BitOffs>
+            <BitOffs>646015712</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -33260,6 +33332,354 @@ that the ADS read function expects to keep checking</Comment>
           <Name>PlcTask Outputs</Name>
           <ContextId>0</ContextId>
           <ByteSize>81461248</ByteSize>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.q_RunDO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983624</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_01.q_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>641983632</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.q_RunDO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070536</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_02.q_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642070544</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.q_RunDO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157448</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_03.q_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642157456</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.q_RunDO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244360</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_PTM_04.q_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642244368</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.q_RunDO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331272</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_PTM_01.q_xLSpd</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642331280</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_PTM_01.q_RunDO</Name>
+            <Comment> Start/Stop for TC110 link this output to the Pumping station bit</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642415008</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_PTM_01.q_PumpingStation</Name>
+            <Comment> Start/Stop interlock</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642415016</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_PTM_01.q_xRemote</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642415024</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_PTM_01.q_xReset</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642415032</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.q_RunDO</Name>
+            <Comment> Start/Stop for TC110 link this output to the Pumping station bit</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642498656</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.q_PumpingStation</Name>
+            <Comment> Start/Stop interlock</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642498664</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.q_xRemote</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642498672</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.q_xReset</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642498680</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_KTOF_PTM_01.q_RunDO</Name>
+            <Comment> Start/Stop for TC110 link this output to the Pumping station bit</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642582304</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_KTOF_PTM_01.q_PumpingStation</Name>
+            <Comment> Start/Stop interlock</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642582312</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_KTOF_PTM_01.q_xRemote</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642582320</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_KTOF_PTM_01.q_xReset</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642582328</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_GJ_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643105472</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_CATCH_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643193856</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_MAIN_GHC_01.q_xHV_DIS</Name>
+            <Comment> Active Low </Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>1</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643282048</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_VRC_01.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643367024</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_VRC_03.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643451952</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.CVMI_ROUGH_VRC_02.q_xCLS_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643536880</BitOffs>
+          </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
             <BitSize>8</BitSize>
@@ -33278,7 +33698,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903664</BitOffs>
+            <BitOffs>646015856</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
@@ -33298,7 +33718,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903672</BitOffs>
+            <BitOffs>646015864</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
@@ -33318,7 +33738,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903680</BitOffs>
+            <BitOffs>646015872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd</Name>
@@ -33345,7 +33765,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903688</BitOffs>
+            <BitOffs>646015880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC</Name>
@@ -33365,7 +33785,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903696</BitOffs>
+            <BitOffs>646015888</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_MAIN_xPRESS_OK</Name>
@@ -33385,7 +33805,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903704</BitOffs>
+            <BitOffs>646015896</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
@@ -33405,7 +33825,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903712</BitOffs>
+            <BitOffs>646015904</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
@@ -33425,7 +33845,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903744</BitOffs>
+            <BitOffs>646015936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable</Name>
@@ -33456,355 +33876,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903752</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.q_RunDO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990600</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_01.q_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641990608</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.q_RunDO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077512</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_02.q_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642077520</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.q_RunDO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164424</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_03.q_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642164432</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.q_RunDO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251336</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_PTM_04.q_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642251344</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.q_RunDO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338248</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_PTM_01.q_xLSpd</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642338256</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_PTM_01.q_RunDO</Name>
-            <Comment> Start/Stop for TC110 link this output to the Pumping station bit</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642421984</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_PTM_01.q_PumpingStation</Name>
-            <Comment> Start/Stop interlock</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642421992</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_PTM_01.q_xRemote</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642422000</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_PTM_01.q_xReset</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642422008</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.q_RunDO</Name>
-            <Comment> Start/Stop for TC110 link this output to the Pumping station bit</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642505632</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.q_PumpingStation</Name>
-            <Comment> Start/Stop interlock</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642505640</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.q_xRemote</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642505648</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_PTM_01.q_xReset</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642505656</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_KTOF_PTM_01.q_RunDO</Name>
-            <Comment> Start/Stop for TC110 link this output to the Pumping station bit</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642589280</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_KTOF_PTM_01.q_PumpingStation</Name>
-            <Comment> Start/Stop interlock</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642589288</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_KTOF_PTM_01.q_xRemote</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642589296</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_KTOF_PTM_01.q_xReset</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642589304</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_GJ_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643112192</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_CATCH_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643200576</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_MAIN_GHC_01.q_xHV_DIS</Name>
-            <Comment> Active Low </Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>1</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643288768</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_VRC_01.q_xOPN_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643373744</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_VRC_03.q_xOPN_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643458672</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.CVMI_ROUGH_VRC_02.q_xCLS_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643543600</BitOffs>
+            <BitOffs>646015944</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -35075,13 +35147,13 @@ that the ADS read function expects to keep checking</Comment>
             <Name>MAIN.fbLogHandler</Name>
             <BitSize>5784896</BitSize>
             <BaseType Namespace="LCLS_General">FB_LogHandler</BaseType>
-            <BitOffs>634668608</BitOffs>
+            <BitOffs>634668928</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.TurboPumpTOF</Name>
             <BitSize>224</BitSize>
             <BaseType Namespace="Tc2_Standard">TOF</BaseType>
-            <BitOffs>640645280</BitOffs>
+            <BitOffs>640645600</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.TurboPumpDelayTime</Name>
@@ -35090,43 +35162,43 @@ that the ADS read function expects to keep checking</Comment>
             <Default>
               <Value>30000</Value>
             </Default>
-            <BitOffs>640645504</BitOffs>
+            <BitOffs>640645824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbGetCurTaskIndex</Name>
             <BitSize>128</BitSize>
             <BaseType Namespace="Tc2_System">GETCURTASKINDEX</BaseType>
-            <BitOffs>640645536</BitOffs>
+            <BitOffs>640645856</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.bMasterStateGood</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
-            <BitOffs>640650696</BitOffs>
+            <BitOffs>640651016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.iMasterState</Name>
             <BitSize>16</BitSize>
             <BaseType>WORD</BaseType>
-            <BitOffs>640650704</BitOffs>
+            <BitOffs>640651024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.fbEcatDiag</Name>
             <BitSize>686944</BitSize>
             <BaseType Namespace="LCLS_General">FB_EcatDiag</BaseType>
-            <BitOffs>640650720</BitOffs>
+            <BitOffs>640651040</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.sMasterState</Name>
             <BitSize>648</BitSize>
             <BaseType>STRING(80)</BaseType>
-            <BitOffs>641337664</BitOffs>
+            <BitOffs>641337984</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.nSlaveNumber</Name>
             <BitSize>16</BitSize>
             <BaseType>UINT</BaseType>
-            <BitOffs>641338320</BitOffs>
+            <BitOffs>641338640</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.aiSlaveStates</Name>
@@ -35136,7 +35208,7 @@ that the ADS read function expects to keep checking</Comment>
               <LBound>1</LBound>
               <Elements>256</Elements>
             </ArrayInfo>
-            <BitOffs>641338336</BitOffs>
+            <BitOffs>641338656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.aEcSlaveInfo</Name>
@@ -35146,7 +35218,7 @@ that the ADS read function expects to keep checking</Comment>
               <LBound>1</LBound>
               <Elements>256</Elements>
             </ArrayInfo>
-            <BitOffs>641340384</BitOffs>
+            <BitOffs>641340704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_CVMI_CATCH_PTM_01</Name>
@@ -35158,7 +35230,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641848960</BitOffs>
+            <BitOffs>641849280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialTXBuffer_CVMI_CATCH_PTM_01</Name>
@@ -35169,7 +35241,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641851472</BitOffs>
+            <BitOffs>641851792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_CVMI_ROUGH_PTM_01</Name>
@@ -35180,7 +35252,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641853984</BitOffs>
+            <BitOffs>641854304</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialTXBuffer_CVMI_ROUGH_PTM_01</Name>
@@ -35191,7 +35263,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641856496</BitOffs>
+            <BitOffs>641856816</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_CVMI_KTOF_PTM_01</Name>
@@ -35202,7 +35274,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641859008</BitOffs>
+            <BitOffs>641859328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialTXBuffer_CVMI_KTOF_PTM_01</Name>
@@ -35213,66 +35285,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641861520</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Variables.xSystemOverrideMode_CVMI</Name>
-            <Comment> Global system override for the HXR Vacuum System EBD</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>0</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: TMO:PLC:CVMI:VAC:OVRDON
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>641903760</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Variables.xOnBeamline</Name>
-            <Comment>Always assume On Beamline for safety checks</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>1</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: TMO:PLC:CVMI:ON:BEAMLINE
-        io:i
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>641903768</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Variables.rHighVoltageMinPressure</Name>
-            <Comment>Hard coded High voltage Minimum Enable Pressure</Comment>
-            <BitSize>32</BitSize>
-            <BaseType>REAL</BaseType>
-            <Default>
-              <Value>1E-05</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>641903776</BitOffs>
+            <BitOffs>641861840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_GJ_PTM_01</Name>
@@ -35303,7 +35316,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903808</BitOffs>
+            <BitOffs>641896832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_GJ_PTM_02</Name>
@@ -35333,7 +35346,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641990720</BitOffs>
+            <BitOffs>641983744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_GJ_PTM_03</Name>
@@ -35363,7 +35376,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642077632</BitOffs>
+            <BitOffs>642070656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_GJ_PTM_04</Name>
@@ -35393,7 +35406,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642164544</BitOffs>
+            <BitOffs>642157568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_MAIN_PTM_01</Name>
@@ -35423,7 +35436,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642251456</BitOffs>
+            <BitOffs>642244480</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_CATCH_PTM_01</Name>
@@ -35450,7 +35463,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642338368</BitOffs>
+            <BitOffs>642331392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_ROUGH_PTM_01</Name>
@@ -35477,7 +35490,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642422016</BitOffs>
+            <BitOffs>642415040</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_KTOF_PTM_01</Name>
@@ -35504,27 +35517,13 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642505664</BitOffs>
+            <BitOffs>642498688</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_GJ_GPI_01</Name>
-            <Comment>KTOF Turbo Pump
- //Not Installed
-    {attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 1^Input;
-                                 .i_xFaultNC		:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 2^Input;
-                                 .i_xRemote			:=	TIIB[KTOF_PNL1_EP01_EP2338-0002]^Channel 3^Input;
-                                 .q_RunDO			:=	TIIB[KTOF_PNL1_EP02_EP2624-0002]^Channel 1^Output;
-                                 .q_xReset 			:=	TIIB[KTOF_PNL1_EP02_EP2624-0002]^Channel 2^Output
-    '}
-    {attribute 'pytmc' := '
-        pv: CVMI:KTOF:PTM:01
-        io: io
-    '}
-    CVMI_KTOF_PTM_01 : FB_PTM_Pfeiffer;
-
-Pirani MKS 275 Gauges</Comment>
-            <BitSize>86464</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_972</BaseType>
+            <Comment> adding a super bee here to interlock GJ GCC for ait attenuator experiment 02-25</Comment>
+            <BitSize>86720</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_CVM201</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -35542,7 +35541,7 @@ Pirani MKS 275 Gauges</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642589312</BitOffs>
+            <BitOffs>642582336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_ROUGH_GPI_01</Name>
@@ -35576,7 +35575,7 @@ MicroPirani MKS 925 Gauges</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642675776</BitOffs>
+            <BitOffs>642669056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_ROUGH_GPI_02</Name>
@@ -35599,7 +35598,7 @@ MicroPirani MKS 925 Gauges</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642762880</BitOffs>
+            <BitOffs>642756160</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_ROUGH_GPI_03</Name>
@@ -35622,7 +35621,7 @@ MicroPirani MKS 925 Gauges</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642849984</BitOffs>
+            <BitOffs>642843264</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_ROUGH_GPI_04</Name>
@@ -35645,7 +35644,7 @@ MicroPirani MKS 925 Gauges</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642937088</BitOffs>
+            <BitOffs>642930368</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_GJ_GCC_01</Name>
@@ -35670,7 +35669,7 @@ MicroPirani MKS 925 Gauges</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643024192</BitOffs>
+            <BitOffs>643017472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_CATCH_GCC_01</Name>
@@ -35694,7 +35693,7 @@ MicroPirani MKS 925 Gauges</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643112576</BitOffs>
+            <BitOffs>643105856</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_MAIN_GHC_01</Name>
@@ -35719,7 +35718,7 @@ MicroPirani MKS 925 Gauges</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643200960</BitOffs>
+            <BitOffs>643194240</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_ROUGH_VRC_01</Name>
@@ -35758,7 +35757,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643288832</BitOffs>
+            <BitOffs>643282112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_ROUGH_VRC_03</Name>
@@ -35783,7 +35782,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643373760</BitOffs>
+            <BitOffs>643367040</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.CVMI_ROUGH_VRC_02</Name>
@@ -35809,7 +35808,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643458688</BitOffs>
+            <BitOffs>643451968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.st_Pfeiffer_CTRL_CVMI_CATCH_PTM_01</Name>
@@ -35826,7 +35825,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643543616</BitOffs>
+            <BitOffs>643536896</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.st_Pfeiffer_RBK_CVMI_CATCH_PTM_01</Name>
@@ -35841,7 +35840,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643546816</BitOffs>
+            <BitOffs>643540096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.fb_PfeifferCom_CVMI_CATCH_PTM_01</Name>
@@ -35852,7 +35851,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643569856</BitOffs>
+            <BitOffs>643563136</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.st_Pfeiffer_CTRL_CVMI_ROUGH_PTM_01</Name>
@@ -35867,7 +35866,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644367552</BitOffs>
+            <BitOffs>644360832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.st_Pfeiffer_RBK_CVMI_ROUGH_PTM_01</Name>
@@ -35882,7 +35881,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644370752</BitOffs>
+            <BitOffs>644364032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.fb_PfeifferCom_CVMI_ROUGH_PTM_01</Name>
@@ -35893,7 +35892,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644393792</BitOffs>
+            <BitOffs>644387072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.st_Pfeiffer_CTRL_CVMI_KTOF_PTM_01</Name>
@@ -35908,7 +35907,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645191488</BitOffs>
+            <BitOffs>645184768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.st_Pfeiffer_RBK_CVMI_KTOF_PTM_01</Name>
@@ -35923,7 +35922,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645194688</BitOffs>
+            <BitOffs>645187968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.fb_PfeifferCom_CVMI_KTOF_PTM_01</Name>
@@ -35934,7 +35933,66 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645217728</BitOffs>
+            <BitOffs>645211008</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Variables.xSystemOverrideMode_CVMI</Name>
+            <Comment> Global system override for the HXR Vacuum System EBD</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>0</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: TMO:PLC:CVMI:VAC:OVRDON
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>646015952</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Variables.xOnBeamline</Name>
+            <Comment>Always assume On Beamline for safety checks</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>1</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: TMO:PLC:CVMI:ON:BEAMLINE
+        io:i
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>646015960</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Variables.rHighVoltageMinPressure</Name>
+            <Comment>Hard coded High voltage Minimum Enable Pressure</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>REAL</BaseType>
+            <Default>
+              <Value>1E-05</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>646015968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -35948,7 +36006,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646016704</BitOffs>
+            <BitOffs>646017280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -35966,7 +36024,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646018752</BitOffs>
+            <BitOffs>646019328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
@@ -35980,7 +36038,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646020800</BitOffs>
+            <BitOffs>646021376</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -35994,7 +36052,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646020832</BitOffs>
+            <BitOffs>646021408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -36015,30 +36073,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646020928</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
-            <Comment> ST_LCLSGeneralEventClass</Comment>
-            <BitSize>960</BitSize>
-            <BaseType GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">ST_LCLSGeneralEventClass</BaseType>
-            <Properties>
-              <Property>
-                <Name>tc_no_symbol</Name>
-                <Value>unused</Value>
-              </Property>
-              <Property>
-                <Name>const_non_replaced</Name>
-              </Property>
-              <Property>
-                <Name>suppress_warning_0</Name>
-                <Value>C0228</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>646053312</BitOffs>
+            <BitOffs>646021504</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcSystemEventClass</Name>
@@ -36107,7 +36142,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646066944</BitOffs>
+            <BitOffs>646038400</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcGeneralAdsEventClass</Name>
@@ -36176,7 +36211,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646067072</BitOffs>
+            <BitOffs>646038528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRouterEventClass</Name>
@@ -36245,7 +36280,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646067200</BitOffs>
+            <BitOffs>646038656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRTimeEventClass</Name>
@@ -36314,7 +36349,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646067328</BitOffs>
+            <BitOffs>646038784</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.Win32EventClass</Name>
@@ -36383,7 +36418,7 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646067456</BitOffs>
+            <BitOffs>646038912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.LCLSGeneralEventClass</Name>
@@ -36452,7 +36487,30 @@ Normally Closed Valve with Readback</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646067584</BitOffs>
+            <BitOffs>646039040</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
+            <Comment> ST_LCLSGeneralEventClass</Comment>
+            <BitSize>960</BitSize>
+            <BaseType GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">ST_LCLSGeneralEventClass</BaseType>
+            <Properties>
+              <Property>
+                <Name>tc_no_symbol</Name>
+                <Value>unused</Value>
+              </Property>
+              <Property>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>suppress_warning_0</Name>
+                <Value>C0228</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>646069504</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -36502,7 +36560,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641895328</BitOffs>
+            <BitOffs>641895648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComIn_CVMI_ROUGH_PTM_01</Name>
@@ -36544,7 +36602,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641895712</BitOffs>
+            <BitOffs>641896032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComIn_CVMI_KTOF_PTM_01</Name>
@@ -36639,7 +36697,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641896096</BitOffs>
+            <BitOffs>641896416</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -36687,7 +36745,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641895520</BitOffs>
+            <BitOffs>641895840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComOut_CVMI_ROUGH_PTM_01</Name>
@@ -36729,7 +36787,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641895904</BitOffs>
+            <BitOffs>641896224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComOut_CVMI_KTOF_PTM_01</Name>
@@ -36771,7 +36829,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641896288</BitOffs>
+            <BitOffs>641896608</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
@@ -36795,7 +36853,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641903592</BitOffs>
+            <BitOffs>646015784</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -44300,21 +44358,21 @@ SERIAL IO</Comment>
             <Comment>FB for accessing "TMO_ROUGH1_VRC_01" VGC_2S data from PLC-TMO-VAC</Comment>
             <BitSize>95872</BitSize>
             <BaseType Namespace="LCLS_Vacuum">FB_TVGC_2S_ADS</BaseType>
-            <BitOffs>640453504</BitOffs>
+            <BitOffs>640453824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.ITF_TMO_ROUGH2_VRC_01</Name>
             <Comment>FB for accessing "TMO_ROUGH2_VRC_01" VGC_2S data from PLC-TMO-VAC</Comment>
             <BitSize>95872</BitSize>
             <BaseType Namespace="LCLS_Vacuum">FB_TVGC_2S_ADS</BaseType>
-            <BitOffs>640549376</BitOffs>
+            <BitOffs>640549696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.i_iWatchdog</Name>
             <Comment> PLC-TMO-VAC will write to this Watchdog variable</Comment>
             <BitSize>32</BitSize>
             <BaseType>UDINT</BaseType>
-            <BitOffs>640645248</BitOffs>
+            <BitOffs>640645568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.sPLCName</Name>
@@ -44324,21 +44382,21 @@ SERIAL IO</Comment>
             <Default>
               <String>PLC-CVMI-VAC</String>
             </Default>
-            <BitOffs>640648704</BitOffs>
+            <BitOffs>640649024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.sAMSNetID</Name>
             <Comment>used for EPICS PV</Comment>
             <BitSize>648</BitSize>
             <BaseType>STRING(80)</BaseType>
-            <BitOffs>640649400</BitOffs>
+            <BitOffs>640649720</BitOffs>
           </Symbol>
           <Symbol>
             <Name>DIAGNOSTICS.sLibVersion_LCLS_General</Name>
             <Comment> := stLibVersion_LCLS_General.sVersion</Comment>
             <BitSize>648</BitSize>
             <BaseType>STRING(80)</BaseType>
-            <BitOffs>640650048</BitOffs>
+            <BitOffs>640650368</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.fbSerialLineControl_CVMI_CATCH_PTM_01</Name>
@@ -44352,7 +44410,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641864032</BitOffs>
+            <BitOffs>641864352</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.fbSerialLineControl_CVMI_ROUGH_PTM_01</Name>
@@ -44363,7 +44421,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641874464</BitOffs>
+            <BitOffs>641874784</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.fbSerialLineControl_CVMI_KTOF_PTM_01</Name>
@@ -44374,7 +44432,7 @@ SERIAL IO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641884896</BitOffs>
+            <BitOffs>641885216</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.fb_ADS_WATCHDOG_VAC_CVMI_TMO</Name>
@@ -44387,7 +44445,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>641896480</BitOffs>
+            <BitOffs>646008704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bLittleEndian</Name>
@@ -44402,7 +44460,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015432</BitOffs>
+            <BitOffs>646016008</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersion</Name>
@@ -44432,7 +44490,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015440</BitOffs>
+            <BitOffs>646016016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -44462,7 +44520,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015504</BitOffs>
+            <BitOffs>646016080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bSimulationMode</Name>
@@ -44477,7 +44535,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015568</BitOffs>
+            <BitOffs>646016144</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bFPUSupport</Name>
@@ -44491,7 +44549,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015576</BitOffs>
+            <BitOffs>646016152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nRegisterSize</Name>
@@ -44506,7 +44564,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015584</BitOffs>
+            <BitOffs>646016160</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nPackMode</Name>
@@ -44521,7 +44579,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015600</BitOffs>
+            <BitOffs>646016176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -44535,7 +44593,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015616</BitOffs>
+            <BitOffs>646016192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersionNumeric</Name>
@@ -44549,7 +44607,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015648</BitOffs>
+            <BitOffs>646016224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_LicenseInfoVarList._LicenseInfo</Name>
@@ -44618,7 +44676,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646015680</BitOffs>
+            <BitOffs>646016256</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_ComTask</Name>
@@ -44632,7 +44690,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646020864</BitOffs>
+            <BitOffs>646021440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_ComTask</Name>
@@ -44646,7 +44704,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646020896</BitOffs>
+            <BitOffs>646021472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__ComTask</Name>
@@ -44667,7 +44725,7 @@ Outputs</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>646021632</BitOffs>
+            <BitOffs>646022208</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -44729,9 +44787,6 @@ Outputs</Comment>
       <Deployment/>
       <EventClasses>
         <EventClass>
-          <Type GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Type>
-        </EventClass>
-        <EventClass>
           <Type GUID="{11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31}">TcSystemEventClass</Type>
         </EventClass>
         <EventClass>
@@ -44746,6 +44801,9 @@ Outputs</Comment>
         <EventClass>
           <Type GUID="{1D0C4BAC-ECF3-4F33-8F20-A12E77AB6387}">Win32EventClass</Type>
         </EventClass>
+        <EventClass>
+          <Type GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Type>
+        </EventClass>
       </EventClasses>
       <Properties>
         <Property>
@@ -44754,11 +44812,11 @@ Outputs</Comment>
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-12-17T10:42:02</Value>
+          <Value>2025-01-27T09:53:42</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>647168</Value>
+          <Value>651264</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
