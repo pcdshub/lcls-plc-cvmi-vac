@@ -139,7 +139,7 @@ VAR_GLOBAL
         pv: CVMI:GJ:GPI:01
         io: io
     '}
-    CVMI_GJ_GPI_01 : FB_972;
+    CVMI_GJ_GPI_01 : FB_CVM201; // adding a super bee here to interlock GJ GCC for ait attenuator experiment 02-25
 
 (* Not installed for LY-91
 
