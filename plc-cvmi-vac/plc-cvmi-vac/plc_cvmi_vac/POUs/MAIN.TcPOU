@@ -339,9 +339,9 @@ xIP1_ROUGH_VRC_01_OPEN_LS 	:=	CVMI_ROUGH_VRC_01.M_IsOpen();
 xIP1_ROUGH_VRC_02_OPEN_LS	:=	CVMI_ROUGH_VRC_02.M_IsOpen();
 xIP1_ROUGH_VRC_03_OPEN_LS 	:= 	CVMI_ROUGH_VRC_03.M_IsOpen();
 //xIP1_TURBO_FAULT AT %Q* : BOOL; already updated at turbo pump logic.
-xIP1_MAIN_xAT_VAC 			:= 	CVMI_CATCH_GCC_01.IG.xAT_VAC;
-xIP1_MAIN_xPRESS_OK 		:= 	CVMI_CATCH_GCC_01.IG.xPRESS_OK;
-rIP1_MAIN_rPRESS 			:= 	CVMI_CATCH_GCC_01.IG.rPRESS;
+xIP1_MAIN_xAT_VAC 			:= 	CVMI_GJ_GCC_01.IG.xAT_VAC; // logic is changed here from catch GCC to GJ GCC only for air attenucator experiment 02-25
+xIP1_MAIN_xPRESS_OK 		:= 	CVMI_GJ_GCC_01.IG.xPRESS_OK;
+rIP1_MAIN_rPRESS 			:= 	CVMI_GJ_GCC_01.IG.rPRESS;
 xIP1_HV_SAFETY_ENABLE		:=	xHighVoltageSafteyLoopEnable;
 
     ]]></ST>
